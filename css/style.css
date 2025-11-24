@@ -72,17 +72,24 @@ span {
   border-radius: 2rem;
   overflow: hidden;
   border: none;
-  color: #18181a;
+  color: #000000;
   display: inline-block;
   font-size: 15px;
   line-height: 15px;
   padding: 18px 18px 17px;
   text-decoration: none;
   cursor: pointer;
-  background: var(--whithe--opacity);
+  background: var(--whithe);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+
+.btn .text {
+  color: rgb(0, 0, 0);
+  text-shadow: none;
+  font-family: "Title";
+  font-weight: bold;
 }
 
 .btn span:first-child {
@@ -100,7 +107,7 @@ span {
   z-index: 100;
   opacity: 0;
   top: 50%;
-  left: 50%;
+  inset-inline-end: 50%;
   transform: translateY(225%) translateX(-50%);
   height: 14px;
   line-height: 13px;
@@ -408,14 +415,16 @@ a:hover::before {
 
 /* strat------------about-us/////////////////// */
 .about-us {
-  margin: auto;
+  margin: 1% auto;
   width: 100%;
   height: 95dvh;
   /* background-color: rgba(245, 245, 245, 0.315); */
   background-color: rgb(255, 255, 255);
   /* box-shadow: -60px 0 200px var(--whithe) inset; */
   box-shadow: 0px -1rem 100rem 3rem var(--whithe) inset;
-  clip-path: ellipse(100% 100% at top);
+  /* clip-path: ellipse(100% 100% at top); */
+  border-radius: 120% / 15%;
+
   display: flex;
 }
 .img-about-us {
@@ -472,12 +481,12 @@ i {
   height: max-content;
   background-color: transparent;
   text-align: center;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, var(--whithe) 0%, white 100%);
+  background-color: white;
   overflow: hidden;
   /* box-shadow: 0px 30px 80px 0px var(--whithe) inset; */
   box-shadow: 0px 1rem 100rem 3rem var(--whithe) inset;
-  clip-path: ellipse(100% 100% at bottom);
+  /* clip-path: ellipse(100% 100% at bottom); */
+  border-radius: 120% / 15%;
 }
 .our-services .btn {
   margin-top: 1.5rem;
@@ -528,17 +537,22 @@ i {
   position: relative;
 }
 .back-text-our-services {
-  /* opacity: 0; */
+  opacity: 0;
   width: 100%;
-  height: max-content;
+  /* height: max-content; */
+  height: 100%;
   background-color: #ffffff90;
   color: rgb(0, 0, 0);
   line-height: 2;
   margin-top: 10%;
   backdrop-filter: blur(2px);
   border: 3px solid rgba(255, 235, 205, 0.37);
+  overflow: auto;
 }
-
+.back-text-our-services:hover {
+  transition: all 1s ease-out;
+  opacity: 1;
+}
 .flexcardTitle {
   font-family: "Jost", sans-serif;
   text-transform: uppercase;
@@ -664,15 +678,14 @@ footer {
 /* end------------our-servis/////////////////// */
 /* start------------gallery-main/////////////////// */
 .gallery-main {
-  margin: 10% auto;
+  margin: 0.5% auto;
   width: 100%;
   height: max-content;
-  border-top: 2px solid black;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, white 0%, var(--whithe) 100%);
+  background-color: white;
   overflow: hidden;
   box-shadow: 0px -30px 80px 0px var(--whithe) inset;
-  clip-path: ellipse(100% 100% at top);
+  /* clip-path: ellipse(100% 100% at top); */
+  border-radius: 120% / 15%;
 }
 .gallery-main h1 {
   color: black;
@@ -692,12 +705,15 @@ footer {
 }
 
 .box {
+  position: relative;
   flex: 1;
   overflow: hidden;
   transition: 1.5s;
   margin: 0 2%;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
   line-height: 0;
+  border-radius: 2%;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.304);
 }
 
 .box > img {
@@ -713,6 +729,8 @@ footer {
   text-align: center;
   height: 10vh;
   line-height: 2.6;
+  background-color: var(--peste);
+  border-radius: 10% 10% 0 0;
 }
 
 .box:hover {
@@ -731,19 +749,21 @@ footer {
 /* end------------gallery-main/////////////////// */
 /* start------------number-info/////////////////// */
 .number-info {
-  margin: -3rem auto;
+  margin: 1% auto;
   width: 95dvw;
-  height: max-content;
+  height: 6rem;
   display: flex;
   gap: 30px;
   justify-content: space-around;
   flex-wrap: wrap;
   border-radius: 8px;
+  overflow: hidden;
+  position: relative;
 }
 .content-info {
   width: 20%;
-  height: 5rem;
-  margin-top: 3rem; /*mobile*/
+  height: 100%;
+  margin-top: 0rem; /*mobile*/
 }
 .content-info h2,
 .content-info h3 {
@@ -756,7 +776,7 @@ footer {
 /* end------------number-info/////////////////// */
 /* start------------client-say/////////////////// */
 .client-say {
-  margin: 5rem auto;
+  margin: 1% auto;
   width: 100%;
   height: 25rem;
   text-align: center;
@@ -764,10 +784,12 @@ footer {
   display: flex;
   overflow: hidden;
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, var(--whithe) 0%, white 100%);
+  /* background: linear-gradient(0deg, var(--whithe) 0%, white 100%); */
+  background: white;
   overflow: hidden;
   box-shadow: 0px -30px 80px 0px var(--whithe) inset;
-  clip-path: ellipse(100% 100% at bottom);
+  /* clip-path: ellipse(100% 100% at bottom); */
+  border-radius: 120% / 15%;
 }
 .client-say h1,
 .client-say h4 {
@@ -1024,7 +1046,7 @@ footer {
   flex-direction: column;
   background-color: #000000;
   font-family: "Plus Jakarta Sans", sans-serif;
-  margin: auto;
+  margin: 1% auto;
   border-radius: 120% / 15%;
 }
 
