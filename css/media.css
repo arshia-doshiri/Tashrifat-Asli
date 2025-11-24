@@ -90,6 +90,21 @@
   .content-client {
     width: 100%;
   }
+  /* ////////start/////////// */
+  .get-help {
+    border-radius: 200% / 15%;
+  }
+  .main-content-get-help {
+    flex-direction: column;
+  }
+  .img-get-help {
+    width: 100%;
+  }
+  .txt-get-help {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  /* ////////end/////////// */
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {

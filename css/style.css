@@ -898,3 +898,123 @@ figure.snip1390 .profile {
 }
 
 /* end------------client-say/////////////////// */
+
+/* start------------get-help/////////////////// */
+.get-help {
+  margin: auto;
+  width: 100%;
+  height: max-content;
+  text-align: center;
+  border-radius: 120% / 15%;
+  overflow: hidden;
+  background-color: white;
+}
+.main-content-get-help {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: max-content;
+}
+.img-get-help {
+  width: 45%;
+  height: 35rem;
+  background-color: #a6a57a;
+  background-image: url(../image/img-get-help.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5%;
+}
+.txt-get-help {
+  width: 45%;
+  height: 35rem;
+  border-radius: 5%;
+}
+
+.card {
+  width: 100%;
+  padding: 30px 90px 90px 90px;
+  border: 6px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  position: relative;
+}
+
+.card .row {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid: auto / auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  grid-gap: 30px;
+}
+
+.card .row .col {
+  position: relative;
+  width: 100%;
+  margin: 30px 20px 40px 0;
+  transition: 0.5s;
+  /* background-color: #000; */
+}
+
+.card .row .form-group {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #000000;
+}
+
+.card .row .form-group input,
+.card .row .form-group textarea {
+  position: absolute;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  font-size: 24px;
+  padding: 10px 0 10px 20px;
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+  color: #000000;
+  border-radius: 50px;
+}
+.textarea {
+  width: 30rem !important;
+}
+.card .row .form-group label {
+  line-height: 40px;
+  color: #000000;
+  font-size: 24px;
+  margin: 0 0 0 30px;
+  display: block;
+  pointer-events: none;
+}
+
+.row .col:nth-child(6) {
+  margin-top: 64px;
+}
+
+.card .row .form-group input:focus,
+.card .row .form-group textarea:focus {
+  border: 5px solid #000000;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 900px) {
+  .card .row {
+    grid-template-columns: repeat(auto-fit, minmax(70%, 1fr));
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 34px;
+  }
+
+  .card .row input[type="submit"] {
+    width: 100%;
+  }
+}
+/* end------------get-help/////////////////// */
