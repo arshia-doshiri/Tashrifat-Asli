@@ -116,7 +116,10 @@
     background-color: black !important;
   }
   .about-us {
-    clip-path: none;
+    height: 35rem;
+  }
+  .img-about-us {
+    background-size: 100%;
   }
   .start-text-header {
     width: 100%;

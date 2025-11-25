@@ -139,6 +139,26 @@ span {
   transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
 }
 
+.progress {
+  position: sticky;
+  height: 5px;
+  bottom: 0;
+  inset-inline-end: 0;
+  background-color: var(--chaklet);
+  animation: scroll-event 1s linear;
+  animation-timeline: scroll(root y);
+}
+@keyframes scroll-event {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.off {
+  display: none;
+}
 /* END//////////////////////Base-style////////////////// 
 */
 /* /////////////////////Menu-Start/////////////////////// */
@@ -147,11 +167,20 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: var(--chaklet) 0px 2px 10px;
+  /* box-shadow: var(--chaklet) 0px 2px 10px; */
   z-index: 1;
   background-color: var(--green);
   height: 4rem;
   backdrop-filter: blur(3px);
+}
+.fixy {
+  position: fixed;
+  width: 92%;
+  top: 0;
+  left: 4.5%;
+  border-radius: 50px;
+  background-color: var(--green--opacity);
+  backdrop-filter: blur(10px);
 }
 nav .logo {
   display: flex;
@@ -180,10 +209,15 @@ nav ul li a {
   text-decoration: none;
   color: #ffffff;
   font-weight: 400;
-  padding: 4px 8px;
+  padding: 5px 10px;
   border-radius: 5px;
   position: relative;
   transition: all 1s;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.332) inset;
+}
+nav ul li a:hover {
+  box-shadow: none;
 }
 
 nav ul li a::before {
@@ -417,11 +451,9 @@ a:hover::before {
 .about-us {
   margin: 1% auto;
   width: 100%;
-  height: 95dvh;
-  /* background-color: rgba(245, 245, 245, 0.315); */
+  height: 105dvh;
   background-color: rgb(255, 255, 255);
-  /* box-shadow: -60px 0 200px var(--whithe) inset; */
-  box-shadow: 0px -1rem 100rem 3rem var(--whithe) inset;
+  /* box-shadow: 0px -1rem 100rem 3rem var(--whithe) inset; */
   /* clip-path: ellipse(100% 100% at top); */
   border-radius: 120% / 15%;
 
@@ -483,13 +515,12 @@ i {
   text-align: center;
   background-color: white;
   overflow: hidden;
-  /* box-shadow: 0px 30px 80px 0px var(--whithe) inset; */
-  box-shadow: 0px 1rem 100rem 3rem var(--whithe) inset;
   /* clip-path: ellipse(100% 100% at bottom); */
   border-radius: 120% / 15%;
 }
 .our-services .btn {
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
 }
 .our-services h1 {
   text-align: center;
@@ -683,7 +714,7 @@ footer {
   height: max-content;
   background-color: white;
   overflow: hidden;
-  box-shadow: 0px -30px 80px 0px var(--whithe) inset;
+  /* box-shadow: 0px -30px 80px 0px var(--whithe) inset; */
   /* clip-path: ellipse(100% 100% at top); */
   border-radius: 120% / 15%;
 }
@@ -695,6 +726,7 @@ footer {
   display: block;
   margin: auto;
   text-align: center;
+  margin-bottom: 1rem;
 }
 .container {
   display: flex;
@@ -784,10 +816,8 @@ footer {
   display: flex;
   overflow: hidden;
   background: rgb(255, 255, 255);
-  /* background: linear-gradient(0deg, var(--whithe) 0%, white 100%); */
   background: white;
   overflow: hidden;
-  box-shadow: 0px -30px 80px 0px var(--whithe) inset;
   /* clip-path: ellipse(100% 100% at bottom); */
   border-radius: 120% / 15%;
 }

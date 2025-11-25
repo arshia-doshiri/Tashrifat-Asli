@@ -1,8 +1,17 @@
+"use strick";
 /////////////value////////////////////////////
 const mobileNav = document.querySelector(".hamburger");
 const navbar = document.querySelector(".menubar");
 const header_p = document.querySelector(".header-p");
 const flexcard = document.querySelectorAll(".flexcard");
+const more_op_text = document.querySelector(".more-op-text");
+const more_option = document.querySelector(".more-option");
+const close = document.querySelector(".close");
+const box_img = document.querySelectorAll(".box-img");
+const box = document.querySelectorAll(".box");
+const figur = document.querySelectorAll(".snip1390");
+const up = document.querySelector(".up");
+const down = document.querySelector(".down");
 
 ///////////////Menu/////////////////////////////////
 const toggleNav = () => {
@@ -27,15 +36,10 @@ flexcardnumber.forEach((mov, i) => (mov.textContent = `${i + 1}`));
 //end//////////////////card-Our-services//////////////
 //start//////////////////main-galery//////////////
 //...main
-const box_img = document.querySelectorAll(".box-img");
-const box = document.querySelectorAll(".box");
 
 box_img.forEach((mov, i) => (mov.src = `image/img-${i}.jpg`));
 //end//////////////////main-galery//////////////
-const figur = document.querySelectorAll(".snip1390");
-const up = document.querySelector(".up");
-const down = document.querySelector(".down");
-
+//start//////////////////client-say//////////////
 //...start base
 let cursilder = 0;
 const maxupsilder = figur.length;
@@ -63,3 +67,16 @@ down.addEventListener("click", function () {
     cur.style.transform = `translateY(${100 * (i - cursilder)}%)`;
   });
 });
+//end//////////////////client-say//////////////
+//start//////////////////navbar-more//////////////
+//...active more menu
+more_op_text.addEventListener("click", function () {
+  more_option.classList.remove("off");
+  more_op_text.classList.add("off");
+});
+//...close
+close.addEventListener("click", function () {
+  more_option.classList.add("off");
+  more_op_text.classList.remove("off");
+});
+//end//////////////////navbar-more//////////////
