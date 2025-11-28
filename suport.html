@@ -3,122 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>تشریفات اصلی | تماس با ما</title>
+    <title>پشتیبانی | تشریفات اصلی</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <header class="header">
-      <div class="container header__container">
-        <a href="index.html" class="logo">
-          <img src="image/logo.png" alt="لوگو" class="logo__img" />
-          <span class="logo__text">تشریفات اصلی</span>
-        </a>
-        <nav class="nav" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="index.html" class="nav__link">بازگشت به خانه</a>
-            </li>
-          </ul>
-          <div class="nav__close" id="nav-close">
-            <i class="fas fa-times"></i>
-          </div>
-        </nav>
-        <div class="header__toggle" id="nav-toggle">
-          <i class="fas fa-bars"></i>
-        </div>
-      </div>
-    </header>
+  <body class="support-page">
+    <div class="support-container">
+      <div class="info-panel">
+        <div class="info-panel__bg"></div>
+        <div class="info-panel__content">
+          <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-right"></i> بازگشت به خانه
+          </a>
 
-    <main class="main-content">
-      <section class="section contact section--page">
-        <div class="container contact__container">
-          <div class="contact__info">
-            <h2 class="section__title">تماس با ما</h2>
-            <p class="contact__description">
-              برای مشاوره رایگان، رزرو خدمات یا هرگونه سوال، تیم پشتیبانی ما
-              آماده پاسخگویی به شماست.
+          <div class="info-header">
+            <h1>بیایید صحبت کنیم</h1>
+            <p>
+              پروژه بعدی شما، شاهکار بعدی ماست. برای مشاوره رایگان با ما در تماس
+              باشید.
             </p>
+          </div>
 
-            <ul class="contact__list">
-              <li class="contact__item">
-                <div class="contact__icon-box">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <span>تهران، خیابان ولیعصر، برج نگین</span>
-              </li>
-              <li class="contact__item">
-                <div class="contact__icon-box">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <a href="tel:02112345678" dir="ltr">021-12345678</a>
-              </li>
-              <li class="contact__item">
-                <div class="contact__icon-box">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <a href="mailto:info@tashrifat.com">info@tashrifat.com</a>
-              </li>
-            </ul>
-
-            <div class="contact__social">
-              <h4 class="contact__social-title">ما را دنبال کنید:</h4>
-              <div class="social__icons social__icons--left">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <div class="info-cards">
+            <div class="info-card">
+              <div class="icon-box"><i class="fas fa-phone-volume"></i></div>
+              <div>
+                <h3>تماس تلفنی</h3>
+                <p dir="ltr">021 - 1234 5678</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="icon-box">
+                <i class="fas fa-envelope-open-text"></i>
+              </div>
+              <div>
+                <h3>ایمیل</h3>
+                <p>hello@tashrifat.com</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
+              <div>
+                <h3>آدرس دفتر</h3>
+                <p>تهران، زعفرانیه، مقدس اردبیلی</p>
               </div>
             </div>
           </div>
 
-          <form class="contact__form" id="contact-form">
-            <h3 class="form__title">ارسال پیام</h3>
-            <div class="form__group">
-              <label for="name" class="form__label">نام و نام خانوادگی</label>
-              <input
-                type="text"
-                id="name"
-                class="form__input"
-                placeholder="مثلاً: علی رضایی"
-                required
-              />
+          <div class="social-connect">
+            <span>شبکه‌های اجتماعی:</span>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
             </div>
-            <div class="form__group">
-              <label for="email" class="form__label">ایمیل / شماره تماس</label>
-              <input
-                type="text"
-                id="email"
-                class="form__input"
-                placeholder="example@mail.com"
-                required
-              />
-            </div>
-            <div class="form__group">
-              <label for="message" class="form__label">پیام شما</label>
-              <textarea
-                id="message"
-                class="form__input"
-                rows="6"
-                placeholder="متن پیام..."
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary btn--block">
-              <i class="fas fa-paper-plane"></i> ارسال پیام
-            </button>
-          </form>
+          </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container">
-        <p class="footer__copy">&copy; 2024 کلیه حقوق محفوظ است.</p>
       </div>
-    </footer>
+
+      <div class="form-panel">
+        <form class="glass-form" id="contactForm">
+          <h2>ارسال پیام</h2>
+
+          <div class="form-grid">
+            <div class="input-group">
+              <input type="text" id="name" required placeholder=" " />
+              <label for="name">نام و نام خانوادگی</label>
+              <i class="fas fa-user input-icon"></i>
+            </div>
+
+            <div class="input-group">
+              <input type="tel" id="phone" required placeholder=" " />
+              <label for="phone">شماره تماس</label>
+              <i class="fas fa-mobile-alt input-icon"></i>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <select id="service">
+              <option value="" disabled selected>
+                نوع خدمات را انتخاب کنید
+              </option>
+              <option value="wedding">برگزاری عروسی</option>
+              <option value="birthday">تولد و جشن‌ها</option>
+              <option value="corporate">همایش و سمینار</option>
+              <option value="other">سایر موارد</option>
+            </select>
+            <i class="fas fa-chevron-down input-icon"></i>
+          </div>
+
+          <div class="input-group">
+            <textarea id="message" required placeholder=" " rows="4"></textarea>
+            <label for="message">توضیحات یا پیام شما</label>
+            <i class="fas fa-pen input-icon"></i>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span>ارسال درخواست</span>
+            <i class="fas fa-paper-plane"></i>
+            <div class="btn-loader"></div>
+          </button>
+        </form>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

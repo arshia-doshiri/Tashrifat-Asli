@@ -5,41 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="تشریفات اصلی - برگزارکننده مراسم‌های خاص و رویایی شما"
+      content="تشریفات اصلی - خالق لحظات ناب و لوکس برای شما"
     />
-    <title>تشریفات اصلی | خانه</title>
+    <title>تشریفات اصلی | تجربه لوکس</title>
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <div id="preloader" class="preloader">
+      <div class="loader-content">
+        <img src="image/logo.png" alt="Logo" class="loader-logo" />
+        <div class="loader-line"></div>
+      </div>
+    </div>
+    <header class="header" id="header">
       <div class="container header__container">
         <a href="index.html" class="logo">
-          <img src="image/logo.png" alt="لوگو تشریفات اصلی" class="logo__img" />
-          <span class="logo__text">تشریفات اصلی</span>
+          <div class="logo__icon-box">
+            <img src="image/logo.png" alt="Tashrifat Asli" class="logo__img" />
+          </div>
+          <div class="logo__text-box">
+            <span class="logo__title">تشریفات اصلی</span>
+            <span class="logo__subtitle">Tashrifat Asli</span>
+          </div>
         </a>
 
         <nav class="nav" id="nav-menu">
+          <div class="nav__backdrop"></div>
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">خانه</a>
+              <a href="#home" class="nav__link active-link" data-text="خانه"
+                >خانه</a
+              >
             </li>
             <li class="nav__item">
-              <a href="#about" class="nav__link">درباره ما</a>
+              <a href="#about" class="nav__link" data-text="درباره ما"
+                >درباره ما</a
+              >
             </li>
             <li class="nav__item">
-              <a href="#services" class="nav__link">سرویس‌ها</a>
+              <a href="#services" class="nav__link" data-text="خدمات">خدمات</a>
             </li>
             <li class="nav__item">
-              <a href="#gallery" class="nav__link">گالری</a>
+              <a href="#gallery" class="nav__link" data-text="گالری">گالری</a>
             </li>
             <li class="nav__item">
-              <a href="suport.html" class="nav__link">پشتیبانی</a>
+              <a href="suport.html" class="nav__link nav__link--btn"
+                >تماس با ما</a
+              >
             </li>
           </ul>
           <div class="nav__close" id="nav-close">
@@ -47,145 +64,309 @@
           </div>
         </nav>
 
-        <div class="header__toggle" id="nav-toggle">
-          <i class="fas fa-bars"></i>
+        <div class="header__actions">
+          <a href="tel:02112345678" class="header__phone">
+            <i class="fas fa-phone-alt"></i>
+            <span class="header__phone-number">021-12345678</span>
+          </a>
+          <div class="header__toggle" id="nav-toggle">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
-    <section class="hero" id="home">
-      <div class="container hero__container">
-        <div class="hero__content">
-          <div class="hero__flag">
-            <img src="image/flag-remove-bg.png" alt="پرچم ایران" />
+    <main class="main">
+      <section class="hero" id="home">
+        <div class="hero__bg-shape"></div>
+        <div class="container hero__container">
+          <div class="hero__content">
+            <div class="hero__badge">
+              <i class="fas fa-star"></i>
+              <span>برترین تشریفات سال ۱۴۰۳</span>
+            </div>
+            <h1 class="hero__title">
+              هنر خلق <br />
+              <span class="highlight-text">لحظات جاودانه</span>
+            </h1>
+            <p class="hero__description">
+              ما در تشریفات اصلی، رویاهای شما را با تلفیقی از هنر، اصالت و تجمل
+              به واقعیت تبدیل می‌کنیم. هر جزئیات داستانی دارد.
+            </p>
+            <div class="hero__buttons">
+              <a href="#services" class="btn btn--primary">
+                <span>خدمات ما</span>
+                <i class="fas fa-arrow-left"></i>
+              </a>
+              <a href="https://instagram.com" class="btn btn--video">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+                <span>مشاهده نمونه کارها</span>
+              </a>
+            </div>
+
+            <div class="hero__stats">
+              <div class="hero__stat-item">
+                <h3>+500</h3>
+                <p>مراسم موفق</p>
+              </div>
+              <div class="hero__stat-separator"></div>
+              <div class="hero__stat-item">
+                <h3>+15</h3>
+                <p>سال تجربه</p>
+              </div>
+            </div>
           </div>
-          <h1 class="hero__title">
-            ساختن بهترین و <span class="highlight">خاص‌ترین لحظه‌ها</span
-            ><br />برای شما
-          </h1>
-          <p class="hero__description">
-            ما اینجا هستیم تا رویاهای شما را به واقعیت تبدیل کنیم. تیمی حرفه‌ای
-            برای برگزاری مراسمی بی‌نقص.
-          </p>
-          <a href="suport.html" class="btn btn--primary">شروع کنید</a>
-        </div>
 
-        <div class="hero__images">
-          <div
-            class="hero__img-box hero__img-box--1"
-            style="background-image: url('image/img-2.jpg')"
-          ></div>
-          <div
-            class="hero__img-box hero__img-box--2"
-            style="background-image: url('image/img-1.jpg')"
-          ></div>
-          <div
-            class="hero__img-box hero__img-box--3"
-            style="background-image: url('image/img-3.jpg')"
-          ></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section about" id="about">
-      <div class="container about__container">
-        <div class="about__image-wrapper">
-          <img src="image/about-us.png" alt="درباره ما" class="about__img" />
-        </div>
-        <div class="about__data">
-          <h2 class="section__title">درباره ما</h2>
-          <h3 class="about__subtitle">تجربه‌ای متفاوت در برگزاری مراسم</h3>
-          <p class="about__description">
-            با بیش از ۱۵ سال سابقه، ما جزئیات را مدیریت می‌کنیم تا شما فقط از
-            لحظات لذت ببرید.
-          </p>
-
-          <div class="about__stats">
-            <div class="stat__item">
-              <i class="fas fa-check-circle stat__icon"></i>
-              <h4 class="stat__number" data-target="500">0</h4>
-              <span class="stat__label">مراسم</span>
+          <div class="hero__visuals">
+            <div class="hero__card hero__card--1">
+              <img src="image/img-2.jpg" alt="Wedding" />
+              <div class="hero__card-content">
+                <span>عروسی رویایی</span>
+              </div>
             </div>
-            <div class="stat__item">
-              <i class="fas fa-calendar-alt stat__icon"></i>
-              <h4 class="stat__number" data-target="15">0</h4>
-              <span class="stat__label">سال سابقه</span>
+            <div class="hero__card hero__card--2">
+              <img src="image/img-1.jpg" alt="Decoration" />
             </div>
-            <div class="stat__item">
-              <i class="fas fa-users stat__icon"></i>
-              <h4 class="stat__number" data-target="20">0</h4>
-              <span class="stat__label">پرسنل</span>
+            <div class="hero__floating-icon icon-1">
+              <i class="fas fa-glass-cheers"></i>
+            </div>
+            <div class="hero__floating-icon icon-2">
+              <i class="fas fa-music"></i>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section services" id="services">
-      <div class="container">
-        <h2 class="section__title section__title--center">سرویس‌های ما</h2>
-        <div class="services__grid">
-          <div class="service__card">
-            <div class="service__icon">
-              <i class="fas fa-calendar-check"></i>
+      <section class="section about" id="about">
+        <div class="container about__container">
+          <div class="about__images">
+            <div class="about__img-box">
+              <img
+                src="image/about-us.png"
+                alt="تیم تشریفات"
+                class="about__img-main"
+              />
+              <div class="about__experience-badge">
+                <span class="exp-number">15</span>
+                <span class="exp-text">سال<br />تجربه طلایی</span>
+              </div>
             </div>
-            <h3 class="service__title">برنامه‌ریزی</h3>
-            <p class="service__text">مدیریت صفر تا صد زمان‌بندی مراسم.</p>
+            <div class="about__pattern"></div>
           </div>
-          <div class="service__card service__card--alt">
-            <div class="service__icon"><i class="fas fa-utensils"></i></div>
-            <h3 class="service__title">کیترینگ</h3>
-            <p class="service__text">منوهای غذایی متنوع و با کیفیت عالی.</p>
-          </div>
-          <div class="service__card">
-            <div class="service__icon"><i class="fas fa-paint-brush"></i></div>
-            <h3 class="service__title">دیزاین</h3>
-            <p class="service__text">گل‌آرایی و دکوراسیون ژورنالی.</p>
-          </div>
-          <div class="service__card service__card--alt">
-            <div class="service__icon"><i class="fas fa-camera"></i></div>
-            <h3 class="service__title">عکاسی</h3>
-            <p class="service__text">تیم حرفه‌ای فیلمبرداری و عکاسی.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="section gallery" id="gallery">
-      <h2 class="section__title section__title--center">گالری تصاویر</h2>
-      <div class="container gallery__container">
-        <div class="gallery__item">
-          <img src="image/img-0.jpg" alt="گالری 1" loading="lazy" />
-          <div class="gallery__overlay"><span>مراسم</span></div>
+          <div class="about__data">
+            <span class="section__subtitle">داستان ما</span>
+            <h2 class="section__title">
+              فراتر از یک <span class="highlight">تشریفات</span>
+            </h2>
+            <p class="about__description">
+              تشریفات اصلی تنها یک برگزارکننده مراسم نیست؛ ما طراحان لحظه‌های
+              ناب هستیم. با بهره‌گیری از جدیدترین متدهای دیزاین و تیمی متخصص،
+              استانداردهای جدیدی را در صنعت تشریفات تعریف کرده‌ایم.
+            </p>
+
+            <ul class="about__features">
+              <li class="feature-item">
+                <i class="fas fa-check-double"></i>
+                <div>
+                  <h4>برنامه‌ریزی دقیق</h4>
+                  <p>مدیریت زمان‌بندی با دقت ثانیه‌ای</p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-gem"></i>
+                <div>
+                  <h4>دیزاین اختصاصی</h4>
+                  <p>طراحی منحصر به فرد برای هر مراسم</p>
+                </div>
+              </li>
+            </ul>
+
+            <a href="#about" class="btn btn--outline">درباره ما بیشتر بدانید</a>
+          </div>
         </div>
-        <div class="gallery__item">
-          <img src="image/img-1.jpg" alt="گالری 2" loading="lazy" />
-          <div class="gallery__overlay"><span>تولد</span></div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="container">
+          <div class="section__header-center">
+            <span class="section__subtitle">خدمات ویژه</span>
+            <h2 class="section__title">
+              تجربه‌ای <span class="highlight">بی‌نظیر</span>
+            </h2>
+          </div>
+
+          <div class="services__grid">
+            <div class="service__card">
+              <div class="service__icon-box">
+                <i class="fas fa-utensils"></i>
+                <div class="icon-blob"></div>
+              </div>
+              <h3 class="service__title">کیترینگ لوکس</h3>
+              <p class="service__desc">
+                منوهای متنوع بین‌المللی و ایرانی با سرویس‌دهی ۵ ستاره توسط
+                مهمانداران مجرب.
+              </p>
+              <a href="#" class="service__link"
+                >مشاهده منو <i class="fas fa-arrow-left"></i
+              ></a>
+              <div class="service__bg-text">FOOD</div>
+            </div>
+
+            <div class="service__card active-card">
+              <div class="service__icon-box">
+                <i class="fas fa-couch"></i>
+                <div class="icon-blob"></div>
+              </div>
+              <h3 class="service__title">دیزاین و دکور</h3>
+              <p class="service__desc">
+                گل‌آرایی ژورنالی، شمع‌آرایی و نورپردازی حرفه‌ای متناسب با تم
+                مراسم شما.
+              </p>
+              <a href="#" class="service__link"
+                >مشاهده نمونه‌ها <i class="fas fa-arrow-left"></i
+              ></a>
+              <div class="service__bg-text">DECOR</div>
+            </div>
+
+            <div class="service__card">
+              <div class="service__icon-box">
+                <i class="fas fa-camera-retro"></i>
+                <div class="icon-blob"></div>
+              </div>
+              <h3 class="service__title">تصویربرداری</h3>
+              <p class="service__desc">
+                تیم حرفه‌ای عکاسی و فیلم‌برداری با تجهیزات سینمایی و هلی‌شات.
+              </p>
+              <a href="#" class="service__link"
+                >مشاهده گالری <i class="fas fa-arrow-left"></i
+              ></a>
+              <div class="service__bg-text">PHOTO</div>
+            </div>
+          </div>
         </div>
-        <div class="gallery__item">
-          <img src="image/img-2.jpg" alt="گالری 3" loading="lazy" />
-          <div class="gallery__overlay"><span>عروسی</span></div>
+      </section>
+
+      <section class="section gallery" id="gallery">
+        <div class="container">
+          <div class="section__header-flex">
+            <div>
+              <span class="section__subtitle">نمونه کارها</span>
+              <h2 class="section__title">
+                لحظات <span class="highlight">ماندگار</span>
+              </h2>
+            </div>
+            <a href="#" class="btn btn--link"
+              >مشاهده تمام گالری <i class="fas fa-arrow-left"></i
+            ></a>
+          </div>
+
+          <div class="gallery__grid">
+            <div class="gallery__item item--large">
+              <img src="image/img-1.jpg" alt="Gallery 1" loading="lazy" />
+              <div class="gallery__info">
+                <h3>عروسی کلاسیک</h3>
+                <span>تهران، عمارت دانیال</span>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <img src="image/img-2.jpg" alt="Gallery 2" loading="lazy" />
+              <div class="gallery__info">
+                <h3>تولد لاکچری</h3>
+                <span>تم طلایی مشکی</span>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <img src="image/img-3.jpg" alt="Gallery 3" loading="lazy" />
+              <div class="gallery__info">
+                <h3>نامزدی</h3>
+                <span>فضای باز</span>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <img src="image/img-4.jpg" alt="Gallery 4" loading="lazy" />
+              <div class="gallery__info">
+                <h3>همایش شرکتی</h3>
+                <span>سالن همایش‌ها</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="gallery__item">
-          <img src="image/img-3.jpg" alt="گالری 4" loading="lazy" />
-          <div class="gallery__overlay"><span>همایش</span></div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer class="footer">
+      <div class="footer__bg">
+        <div class="footer__circle circle-1"></div>
+        <div class="footer__circle circle-2"></div>
+      </div>
+
       <div class="container footer__container">
-        <div class="footer__brand">
-          <h3 class="footer__title">تشریفات اصلی</h3>
-          <p class="footer__description">همراه لحظه‌های خوش شما.</p>
+        <div class="footer__content">
+          <div class="footer__logo-section">
+            <a href="#" class="footer__logo">
+              <img src="./image/logo.png" alt="Logo" />
+              <span>تشریفات اصلی</span>
+            </a>
+            <p class="footer__text">
+              همراه شما در ساختن خاطراتی که هرگز فراموش نمی‌شوند. کیفیت، تعهد و
+              خلاقیت شعار ماست.
+            </p>
+            <div class="footer__socials">
+              <a href="#" class="social-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-telegram-plane"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer__links">
+            <h3 class="footer__heading">دسترسی سریع</h3>
+            <ul>
+              <li><a href="#about">درباره ما</a></li>
+              <li><a href="#services">خدمات و پکیج‌ها</a></li>
+              <li><a href="#gallery">نمونه کارها</a></li>
+              <li><a href="suport.html">تماس با پشتیبانی</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__contact">
+            <h3 class="footer__heading">اطلاعات تماس</h3>
+            <ul class="contact-list">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>تهران، زعفرانیه، خیابان مقدس اردبیلی، پلاک ۱۴</span>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:02112345678" dir="ltr">021-1234 5678</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>info@tashrifatasli.com</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="footer__social">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-telegram"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+        <div class="footer__bottom">
+          <p>&copy; ۲۰۲۴ تمامی حقوق برای تشریفات اصلی محفوظ است.</p>
+          <div class="footer__legal">
+            <a href="#">قوانین و مقررات</a>
+            <a href="#">حریم خصوصی</a>
+          </div>
         </div>
       </div>
-      <p class="footer__copy">&copy; 2024 کلیه حقوق محفوظ است.</p>
     </footer>
 
     <script src="script.js"></script>
