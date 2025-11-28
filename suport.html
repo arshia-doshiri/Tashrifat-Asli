@@ -1,132 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/media.css" />
+    <title>تشریفات اصلی | تماس با ما</title>
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="suport-page">
-    <section id="contact">
-      <h1 class="section-header"><span>Contact</span>-Us</h1>
-
-      <div class="contact-wrapper">
-        <!-- Left contact page -->
-
-        <form id="contact-form" class="form-horizontal" role="form">
-          <div class="form-group">
-            <div class="col-sm-12">
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                placeholder="NAME"
-                name="name"
-                value=""
-                required
-              />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-sm-12">
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="EMAIL"
-                name="email"
-                value=""
-                required
-              />
-            </div>
-          </div>
-
-          <textarea
-            class="form-control"
-            rows="10"
-            placeholder="MESSAGE"
-            name="message"
-            required
-          ></textarea>
-
-          <button
-            class="btn-primary btn-primary send-button"
-            id="submit"
-            type="submit"
-            value="SEND"
-          >
-            <div class="alt-send-button">
-              <i class="fa fa-paper-plane"></i
-              ><span class="send-text">SEND</span>
-            </div>
-          </button>
-        </form>
-
-        <!-- right contact page -->
-
-        <div class="direct-contact-container">
-          <ul class="contact-list">
-            <li class="list-item">
-              <i class="fa fa-map-marker fa-2x"
-                ><span class="contact-text place">City, State</span></i
-              >
-            </li>
-
-            <li class="list-item">
-              <i class="fa fa-phone fa-2x"
-                ><span class="contact-text phone"
-                  ><a href="tel:1-212-555-5555" title="Give me a call"
-                    >(212) 555-2368</a
-                  ></span
-                ></i
-              >
-            </li>
-
-            <li class="list-item">
-              <i class="fa fa-envelope fa-2x"
-                ><span class="contact-text gmail"
-                  ><a href="mailto:#" title="Send me an email"
-                    >hitmeup@gmail.com</a
-                  ></span
-                ></i
-              >
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="index.html" class="logo">
+          <img src="image/logo.png" alt="لوگو" class="logo__img" />
+          <span class="logo__text">تشریفات اصلی</span>
+        </a>
+        <nav class="nav" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">بازگشت به خانه</a>
             </li>
           </ul>
-
-          <hr />
-          <ul class="social-media-list">
-            <li>
-              <a href="#" target="_blank" class="contact-icon">
-                <i class="fa-brands fa-telegram"></i
-              ></a>
-            </li>
-            <li>
-              <a href="#" target="_blank" class="contact-icon">
-                <i class="fa-brands fa-instagram"></i
-              ></a>
-            </li>
-            <li>
-              <a href="#" target="_blank" class="contact-icon">
-                <i class="fa-brands fa-whatsapp"></i
-              ></a>
-            </li>
-            <li>
-              <a href="#" target="_blank" class="contact-icon">
-                <i class="fa-brands fa-facebook-f"></i
-              ></a>
-            </li>
-          </ul>
-          <hr />
-
-          <div class="copyright-suport">&copy; ALL OF THE RIGHTS RESERVED</div>
+          <div class="nav__close" id="nav-close">
+            <i class="fas fa-times"></i>
+          </div>
+        </nav>
+        <div class="header__toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
         </div>
       </div>
-    </section>
+    </header>
+
+    <main class="main-content">
+      <section class="section contact section--page">
+        <div class="container contact__container">
+          <div class="contact__info">
+            <h2 class="section__title">تماس با ما</h2>
+            <p class="contact__description">
+              برای مشاوره رایگان، رزرو خدمات یا هرگونه سوال، تیم پشتیبانی ما
+              آماده پاسخگویی به شماست.
+            </p>
+
+            <ul class="contact__list">
+              <li class="contact__item">
+                <div class="contact__icon-box">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span>تهران، خیابان ولیعصر، برج نگین</span>
+              </li>
+              <li class="contact__item">
+                <div class="contact__icon-box">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <a href="tel:02112345678" dir="ltr">021-12345678</a>
+              </li>
+              <li class="contact__item">
+                <div class="contact__icon-box">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <a href="mailto:info@tashrifat.com">info@tashrifat.com</a>
+              </li>
+            </ul>
+
+            <div class="contact__social">
+              <h4 class="contact__social-title">ما را دنبال کنید:</h4>
+              <div class="social__icons social__icons--left">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact__form" id="contact-form">
+            <h3 class="form__title">ارسال پیام</h3>
+            <div class="form__group">
+              <label for="name" class="form__label">نام و نام خانوادگی</label>
+              <input
+                type="text"
+                id="name"
+                class="form__input"
+                placeholder="مثلاً: علی رضایی"
+                required
+              />
+            </div>
+            <div class="form__group">
+              <label for="email" class="form__label">ایمیل / شماره تماس</label>
+              <input
+                type="text"
+                id="email"
+                class="form__input"
+                placeholder="example@mail.com"
+                required
+              />
+            </div>
+            <div class="form__group">
+              <label for="message" class="form__label">پیام شما</label>
+              <textarea
+                id="message"
+                class="form__input"
+                rows="6"
+                placeholder="متن پیام..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">
+              <i class="fas fa-paper-plane"></i> ارسال پیام
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__copy">&copy; 2024 کلیه حقوق محفوظ است.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
