@@ -165,3 +165,23 @@ revealElements.forEach((el) => {
 window.addEventListener("scroll", revealOnScroll);
 // Trigger once on load
 revealOnScroll();
+
+/* =========================================
+   7. client-say
+   ========================================= */
+const slider = document.querySelectorAll(".main-client-say");
+const up = document.querySelector(".arrow-box");
+let curslider = 0;
+const maxslider = slider.length;
+
+slider.forEach((cur, i) => {
+  cur.style.transform = `translateX(${200 * i}%)`;
+});
+
+up.addEventListener("click", function () {
+  ++curslider;
+  slider.forEach((cur, i) => {
+    cur.style.transform = `translateX(${200 * (i - curslider)}%)`;
+  });
+  console.log("ok");
+});
