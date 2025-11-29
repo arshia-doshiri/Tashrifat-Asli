@@ -170,16 +170,33 @@ revealOnScroll();
    7. client-say
    ========================================= */
 const slider = document.querySelectorAll(".main-client-say");
-const up = document.querySelector(".arrow-box");
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
 let curslider = 0;
 const maxslider = slider.length;
 
 slider.forEach((cur, i) => {
   cur.style.transform = `translateX(${200 * i}%)`;
 });
-
-up.addEventListener("click", function () {
-  ++curslider;
+///////left
+left.addEventListener("click", function () {
+  if (curslider === maxslider - 1) {
+    curslider = 0;
+  } else {
+    ++curslider;
+  }
+  slider.forEach((cur, i) => {
+    cur.style.transform = `translateX(${200 * (i - curslider)}%)`;
+  });
+  console.log("ok");
+});
+////////////right
+right.addEventListener("click", function () {
+  if (curslider === 0) {
+    curslider = 0;
+  } else {
+    --curslider;
+  }
   slider.forEach((cur, i) => {
     cur.style.transform = `translateX(${200 * (i - curslider)}%)`;
   });
