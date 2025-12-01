@@ -1446,6 +1446,7 @@ ul {
   .header__toggle {
     display: block;
   }
+
   .nav {
     position: fixed;
     top: 0;
@@ -1503,6 +1504,10 @@ ul {
     margin-top: 4rem;
     width: 90%;
     height: 15rem;
+  }
+
+  .back-client {
+    display: none;
   }
 
   .footer {
