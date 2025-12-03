@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "visit": "از ۱۲ الی ۱۸",
+    "capacity": 700,
+    "offer": "ورودی رایگان",
+    "costFormula": "منو x تعداد ",
+    "dj": 30000000,
+    "videographer": 20000000,
+    "outdoorTable": 15000000,
+    "indoorTable": 10000000,
+    "title": "تالار قصر طلایی",
+    "location": "تهران - تجریش"
+  },
+  {
+    "id": 2,
+    "visit": "از ۱۸ الی ۲۲",
+    "capacity": 1000,
+    "offer": "ورودی رایگان",
+    "costFormula": "منو x تعداد ",
+    "dj": 70000000,
+    "videographer": 25000000,
+    "outdoorTable": 35000000,
+    "indoorTable": 20000000,
+    "title": "قصر اصلی",
+    "location": "کرج - جاده ۳۵ - فرعی ۱۲"
+  },
+  {
+    "id": 3,
+    "visit": "از ۸ الی ۱۲",
+    "capacity": 200,
+    "offer": "میز میوه رایگان",
+    "costFormula": "منو x تعداد ",
+    "dj": 15000000,
+    "videographer": 10000000,
+    "outdoorTable": "نداریم",
+    "indoorTable": 17000000,
+    "title": "عمارت زیبا",
+    "location": "تهران - نیاوران - خیابان صفایی - برج نگین رضا"
+  }
+]

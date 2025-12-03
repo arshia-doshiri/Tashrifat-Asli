@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>عمارت کاخ — معرفی تالار</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ssttyle.css" />
+  </head>
+  <body>
+    <div class="wrap" role="main">
+      <section class="hero" aria-labelledby="hall-title">
+        <!-- /////////--- photo ******
+        ////////////////////////// -->
+        <div class="photo" aria-hidden="true">
+          <div class="title">
+            <div style="font-size: 14px; color: var(--muted)">عمارت</div>
+            <h1 id="title_img"></h1>
+            <p class="small" id="location">
+              اتوبان فتح — بلوار باغستان — ۵۰م بالاتر از گلستان ششم
+            </p>
+          </div>
+        </div>
+        <!-- /////////--- photo ******
+        //////////END///////// -->
+
+        <aside class="info" aria-label="اطلاعات سریع تالار">
+          <div class="brand">
+            <div class="logo">KAḴ</div>
+            <div>
+              <div style="font-weight: 800"><h1 id="title"></h1></div>
+              <div class="lead"><p>اطلاعات و جزعیات</p></div>
+            </div>
+          </div>
+
+          <!-- /////////grid-left////////////// -->
+          <div class="grid" aria-hidden="false">
+            <div class="cell">
+              <div>
+                <div class="label">بازدید</div>
+                <div class="small"><p id="visit"></p></div>
+              </div>
+              <div class="value">روزانه</div>
+            </div>
+            <div class="cell">
+              <div>
+                <div class="label">ظرفیت</div>
+                <div class="small">حداکثر</div>
+              </div>
+              <div class="value"><p id="capacity"></p></div>
+            </div>
+
+            <div class="cell">
+              <div>
+                <div class="label">شرایط ویژه</div>
+                <div class="small">مراسم >100 نفر</div>
+              </div>
+              <div class="value">ورودی رایگان</div>
+            </div>
+            <div class="cell">
+              <div>
+                <div class="label">فرمول هزینه</div>
+                <div class="small">ساده</div>
+              </div>
+              <div class="value">تعداد × منو</div>
+            </div>
+
+            <div class="cell">
+              <div>
+                <div class="label">دی‌جی</div>
+                <div class="small">قیمت هر شب</div>
+              </div>
+              <div class="value"><p id="dj" class="price-number"></p></div>
+            </div>
+            <div class="cell">
+              <div>
+                <div class="label">فیلم‌بردار</div>
+                <div class="small">قیمت هر شب</div>
+              </div>
+              <div class="value">
+                <p id="videographer" class="price-number"></p>
+              </div>
+            </div>
+          </div>
+          <!-- /////////grid-left////////////
+           //////////End//////////// -->
+
+          <!-- ///////////price-botoom///////// -->
+          <div class="price" aria-hidden="true">
+            <div class="badge accent">
+              <p>
+                سفره عقد فضای باز:<span
+                  id="outdoorTable"
+                  class="price-number"
+                ></span>
+              </p>
+            </div>
+            <div class="badge">
+              <p>
+                سفره عقد داخل:<span
+                  id="indoorTable"
+                  class="price-number"
+                ></span>
+              </p>
+            </div>
+          </div>
+          <!-- ///////////price-botoom/////
+            end///////////////////////// -->
+
+          <div class="actions">
+            <a class="btn call" href="tel:+989122069250">📞 تماس با ما</a>
+            <a class="btn book" href="#book">رزرو / اطلاعات بیشتر</a>
+          </div>
+        </aside>
+      </section>
+
+      <section class="details-test">
+        <h2>Frequently Asked Questions</h2>
+
+        <div
+          style="
+            visibility: hidden;
+            position: absolute;
+            width: 0px;
+            height: 0px;
+          "
+        >
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol viewBox="0 0 24 24" id="expand-more">
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </symbol>
+            <symbol viewBox="0 0 24 24" id="close">
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </symbol>
+          </svg>
+        </div>
+
+        <details open>
+          <summary>
+            Does this product have what I need?
+            <svg
+              class="control-icon control-icon-expand"
+              width="24"
+              height="24"
+              role="presentation"
+            >
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="#expand-more"
+              />
+            </svg>
+            <svg
+              class="control-icon control-icon-close"
+              width="24"
+              height="24"
+              role="presentation"
+            >
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="#close"
+              />
+            </svg>
+          </summary>
+          <p>Totally. Totally does.</p>
+        </details>
+
+        <details>
+          <summary>
+            Can I use it all the time?
+            <svg
+              class="control-icon control-icon-expand"
+              width="24"
+              height="24"
+              role="presentation"
+            >
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="#expand-more"
+              />
+            </svg>
+            <svg
+              class="control-icon control-icon-close"
+              width="24"
+              height="24"
+              role="presentation"
+            >
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="#close"
+              />
+            </svg>
+          </summary>
+          <p>Of course you can, we won't stop you.</p>
+        </details>
+
+        <details>
+          <summary>
+            Are there any restrictions?
+            <svg
+              class="control-icon control-icon-expand"
+              width="24"
+              height="24"
+              role="presentation"
+            >
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="#expand-more"
+              />
+            </svg>
+            <svg
+              class="control-icon control-icon-close"
+              width="24"
+              height="24"
+              role="presentation"
+            >
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="#close"
+              />
+            </svg>
+          </summary>
+          <p>Only your imagination my friend. Go forth!</p>
+        </details>
+      </section>
+
+      <div style="height: 28px"></div>
+    </div>
+
+    <!-- موبایل: نوار تماس ثابت -->
+    <div class="contact-fixed" role="navigation" aria-label="تماس سریع">
+      <a class="btn call" href="tel:+989122069250">📞 تماس</a>
+      <a class="btn book" href="#book">📅 رزرو</a>
+    </div>
+    <script src="js/hall.js"></script>
+  </body>
+</html>
