@@ -71,4 +71,9 @@ fetch("../data/halls.json")
         }
       });
     } ////end
+
+    ////////////////////photo
+    const idphoto = hall.photo;
+    document.querySelector(".photo").style.backgroundImage = hall.photo;
+    console.log(idphoto);
   });
