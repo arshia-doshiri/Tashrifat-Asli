@@ -34,14 +34,14 @@ fetch("../data/halls.json")
 
       ///////make number persin style///////////
       //...1
-      const price_number = document.querySelectorAll(".price-number");
-      price_number.forEach((mov) => {
-        const number = mov.textContent;
+      // const price_number = document.querySelectorAll(".price-number");
+      // price_number.forEach((mov) => {
+      //   const number = mov.textContent;
 
-        const iran_number = new Intl.NumberFormat("fa-IR").format(number);
+      //   const iran_number = new Intl.NumberFormat("fa-IR").format(number);
 
-        mov.textContent = iran_number;
-      });
+      //   mov.textContent = iran_number;
+      // });
 
       // price_number.forEach((mov) => {
       //   if (mov.textContent === "ناعدد") {
@@ -52,5 +52,23 @@ fetch("../data/halls.json")
       // });
 
       //...2
+      const badge = document.querySelectorAll(".badge");
+
+      const price_number = document.querySelectorAll(".price-number");
+
+      price_number.forEach((mov) => {
+        //..first part
+
+        const number = mov.textContent;
+        const iran_number = new Intl.NumberFormat("fa-IR").format(number);
+        mov.textContent = iran_number;
+
+        if (mov.textContent === "ناعدد") {
+          const parent = mov.parentElement.parentElement;
+          parent.classList.add("disable");
+          const ids = mov.attributes.id.textContent;
+          mov.textContent = hall[ids];
+        }
+      });
     } ////end
   });

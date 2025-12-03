@@ -504,3 +504,45 @@ details[open] .control-icon-close {
 details[open] .control-icon-expand {
   display: none;
 }
+
+/* ///////////////////disable////////////////////// */
+.disable {
+  position: relative;
+  opacity: 0.5;
+  border-inline-start: 2px double rgb(0, 0, 0);
+  border-inline-end: 2px double rgb(0, 0, 0);
+  overflow: hidden;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.disable::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.178);
+  backdrop-filter: blur(1px);
+  inset-inline-start: 0;
+  top: 8%;
+  transform: translateY(-50%);
+  border-top: 2px solid rgba(0, 0, 0, 0.557);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.557);
+  border-radius: 10px;
+  animation: disable-an 2s linear infinite alternate-reverse;
+  z-index: -1;
+}
+.disable::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.178);
+  backdrop-filter: blur(1px);
+  inset-inline-start: 0;
+  top: 95%;
+  transform: translateY(-50%);
+  border-top: 2px solid rgba(0, 0, 0, 0.557);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.557);
+  border-radius: 10px;
+  animation: disable-an 2s linear infinite alternate-reverse;
+  z-index: -1;
+}
