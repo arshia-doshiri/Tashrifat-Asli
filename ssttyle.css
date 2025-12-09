@@ -291,7 +291,7 @@
   --font-sans: "Rubik", sans-serif;
   --font-serif: "Cardo", serif;
 }
-body {
+.moarefi {
   margin: 0;
   font-family: "Vazirmatn", system-ui, -apple-system, "Segoe UI", Roboto;
   /* background: linear-gradient(180deg, #07070a 0%, #0b1020 100%); */
