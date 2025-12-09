@@ -202,3 +202,16 @@ right.addEventListener("click", function () {
   });
   console.log("ok");
 });
+/* =========================================
+   8. header-active-click-underline
+   ========================================= */
+const a_tag = document.querySelectorAll("a");
+const nav__item = document.querySelector(".nav__item");
+a_tag.forEach((mov) => {
+  if (mov.parentElement.closest(".nav__item")) {
+    mov.addEventListener("click", function (e) {
+      a_tag.forEach((mov) => mov.classList.remove("active-link"));
+      this.classList.add("active-link");
+    });
+  }
+});

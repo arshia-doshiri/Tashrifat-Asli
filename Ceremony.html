@@ -12,11 +12,47 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Vazirmatn:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="ssttyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="ssttyle.css" /> -->
   </head>
-  <body class="index">
-    <header class="header-back-to-main">
-      <a href="index.html"> بازگشت به صفحه اصلی ←</a>
+  <body>
+    <header class="header header-ceremony" id="header">
+      <div class="container header__container">
+        <a href="index.html" class="logo">
+          <div class="logo__icon-box">
+            <img src="image/logo.png" alt="Tashrifat Asli" class="logo__img" />
+          </div>
+          <div class="logo__text-box">
+            <span class="logo__title">تشریفات اصلی</span>
+            <span class="logo__subtitle">Tashrifat Asli</span>
+          </div>
+        </a>
+
+        <nav class="nav" id="nav-menu">
+          <div class="nav__backdrop"></div>
+          <ul class="nav__list">
+            <a href="index.html"><p>باز گشت به صفحه اصلی ←</p></a>
+          </ul>
+          <div class="nav__close" id="nav-close">
+            <i class="fas fa-times"></i>
+          </div>
+        </nav>
+
+        <div class="header__actions">
+          <a href="tel:02112345678" class="header__phone">
+            <i class="fas fa-phone-alt"></i>
+            <span class="header__phone-number">021-12345678</span>
+          </a>
+          <div class="header__toggle" id="nav-toggle">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-en-scroll"></div>
     </header>
 
     <main class="page-content">
@@ -27,7 +63,7 @@
           <p class="copy">
             تجربه‌ای بی‌نظیر از شکوه و جلال در دل کوهستان با معماری کلاسیک
           </p>
-          <div class="btn">
+          <div class="btn-ceremony">
             <a href="hall.html?id=1">مشاهده جزئیات</a>
           </div>
         </div>
@@ -38,7 +74,7 @@
         <div class="content">
           <h2 class="title">عمارت پارس</h2>
           <p class="copy">طراحی ساحلی مدرن برای مراسم‌های خاص و به‌یادماندنی</p>
-          <div class="btn">
+          <div class="btn-ceremony">
             <a href="hall.html?id=2">مشاهده جزئیات</a>
           </div>
         </div>
@@ -51,11 +87,13 @@
           <p class="copy">
             فضایی سبز و رویایی برای ثبت زیباترین لحظات زندگی شما
           </p>
-          <div class="btn">
+          <div class="btn-ceremony">
             <a href="hall.html?id=3">مشاهده جزئیات</a>
           </div>
         </div>
       </div>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
