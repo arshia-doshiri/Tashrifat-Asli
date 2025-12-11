@@ -2,13 +2,13 @@
 /* /////indext.html////// */
 /* /////////////////// */
 :root {
-  /* پالت رنگی شما */
+  /* Your color palette */
   --bg-color: #f9f7f2;
   --text-main: #1a1a1a;
   --accent-olive: rgb(135, 140, 83);
   --accent-copper: rgb(196, 140, 101);
 
-  /* تنظیمات انیمیشن */
+  /* Animation settings */
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
   --font-sans: "Vazirmatn", sans-serif;
@@ -27,7 +27,7 @@
   color: var(--text-main);
 }
 
-/* هدر مینیمال */
+/* Minimal header */
 .header-back-to-main {
   position: sticky;
   top: 0;
@@ -59,7 +59,7 @@
   background-color: rgba(135, 140, 83, 0.05);
 }
 
-/* بدنه اصلی */
+/* Main body */
 .page-content {
   display: grid;
   grid-gap: 2rem;
@@ -69,7 +69,7 @@
   justify-items: center;
   height: max-content;
 }
-/* گرید ریسپانسیو */
+/* Responsive grid */
 @media (min-width: 600px) {
   .page-content {
     grid-template-columns: repeat(2, 1fr);
@@ -77,11 +77,11 @@
 }
 @media (min-width: 1024px) {
   .page-content {
-    grid-template-columns: repeat(3, 1fr); /* 3 ستون برای تعادل بهتر */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for better balance */
   }
 }
 
-/* کارت‌ها */
+/* Cards */
 .card {
   position: relative;
   display: flex;
@@ -89,13 +89,13 @@
   overflow: hidden;
   padding: 1rem;
   width: 80%;
-  max-width: 22rem; /* کمی عریض تر */
-  height: 450px; /* کارت‌های بلندتر برای حس لوکس بودن */
+  max-width: 22rem; /* Slightly wider */
+  height: 450px; /* Taller cards for a luxurious feel */
   text-align: center;
   color: whitesmoke;
   background-color: whitesmoke;
-  box-shadow: 0 10px 30px -10px rgb(0, 0, 0); /* سایه نرم‌تر */
-  border-radius: 4px; /* گوشه‌های کمی گرد اما نه زیاد */
+  box-shadow: 0 10px 30px -10px rgb(0, 0, 0); /* Softer shadow */
+  border-radius: 4px; /* Slightly rounded corners, but not too much */
   transition: box-shadow 0.3s ease;
 }
 
@@ -103,7 +103,7 @@
   box-shadow: 0 20px 40px -10px rgba(135, 140, 83, 0.3);
 }
 
-/* تصویر پس‌زمینه کارت */
+/* Card background image */
 .card:before {
   content: "";
   position: absolute;
@@ -117,7 +117,7 @@
   pointer-events: none;
 }
 
-/* لایه تاریک روی کارت (گرادینت کلاسیک) */
+/* Dark overlay on card (classic gradient) */
 .card:after {
   content: "";
   display: block;
@@ -132,13 +132,13 @@
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.1) 30%,
     rgba(91, 140, 83, 0.6) 60%,
-    /* استفاده از رنگ زیتونی در گرادینت */ rgba(0, 0, 0, 0.8) 100%
+    /* Using olive color in gradient */ rgba(0, 0, 0, 0.8) 100%
   );
   transform: translateY(-50%);
   transition: transform calc(var(--d) * 2) var(--e);
 }
 
-/* محتوای متنی */
+/* Text content */
 .content {
   position: relative;
   display: flex;
@@ -169,7 +169,7 @@
   margin-bottom: 1.5rem;
 }
 
-/* دکمه لوکس */
+/* Luxury button */
 .btn {
   cursor: pointer;
   padding: 0.8rem 2rem;
@@ -178,7 +178,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: white;
-  background-color: var(--accent-copper); /* رنگ مسی */
+  background-color: var(--accent-copper); /* Copper color */
   border: 1px solid var(--accent-copper);
   width: auto;
   min-width: 150px;
@@ -203,7 +203,7 @@
   border-color: white;
 }
 
-/* تنظیم تصاویر بک گراند برای هر کارت به صورت جداگانه در CSS برای تمیزی HTML */
+/* Setting background images for each card separately in CSS for cleaner HTML */
 .card:nth-child(1):before {
   background-image: url(image/card-img.JPG);
 }
@@ -214,7 +214,7 @@
   background-image: url(image/card-img.JPG);
 }
 
-/* انیمیشن‌ها در دسکتاپ */
+/* Animations on desktop */
 @media (hover: hover) and (min-width: 600px) {
   .card:after {
     transform: translateY(0);
@@ -265,7 +265,7 @@
   }
 }
 
-/* برای موبایل: محتوا همیشه نمایش داده شود */
+/* For mobile: content is always displayed */
 @media (hover: none) or (max-width: 600px) {
   .content {
     transform: translateY(0);

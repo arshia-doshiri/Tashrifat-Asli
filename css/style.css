@@ -1809,7 +1809,7 @@ ul {
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
-  font-family: var(--font-sans);
+  font-family: var(--font-main);
   color: var(--text-main);
 }
 
@@ -1923,12 +1923,12 @@ ul {
   line-height: 1.2;
   margin-bottom: 0.5rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  font-family: var(--font-serif); /* استفاده از فونت کلاسیک برای تیتر */
+  font-family: var(--font-main);
   letter-spacing: 0.5px;
 }
 
 .copy {
-  font-family: var(--font-sans);
+  font-family: var(--font-main);
   font-size: 0.95rem;
   line-height: 1.6;
   opacity: 0.9;
@@ -1953,7 +1953,7 @@ ul {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
-  font-family: var(--font-sans);
+  font-family: var(--font-main);
   border-radius: 10px;
 }
 

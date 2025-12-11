@@ -1,38 +1,38 @@
-// 1) گرفتن id از URL
+// 1) Get id from URL
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-// 2) خوندن دیتابیس halls.json
+// 2) Read halls.json database
 fetch("data/halls.json")
   .then((res) => res.json())
   .then((data) => {
-    // 3) پیدا کردن تالار موردنظر
+    // 3) Find the desired hall
     const hall = data.find((item) => item.id == id);
 
-    // 4) پر کردن صفحه
+    // 4) Populate the page
     if (hall) {
-      ////////////اسم مجموعه///////////////////////
+      ////////////Collection Name///////////////////////
       document.getElementById("title").textContent = hall.title;
-      ////////////اسم مجموعه///////////////////////
+      ////////////Collection Name///////////////////////
       document.getElementById("title_img").textContent = hall.title;
-      ////////////بازدید///////////////////////
+      ////////////Visit///////////////////////
       document.getElementById("visit").textContent = hall.visit;
-      ////////////ضرفیت///////////////////////
+      ////////////Capacity///////////////////////
       document.getElementById(
         "capacity"
       ).textContent = `نفر : ${hall.capacity}`;
-      ////////////دیجی///////////////////////
+      ////////////DJ///////////////////////
       document.getElementById("dj").textContent = hall.dj;
-      ////////////فیلم بردار///////////////////////
+      ////////////Videographer///////////////////////
       document.getElementById("videographer").textContent = hall.videographer;
-      ////////////سفره فضای باز///////////////////////
+      ////////////Outdoor Table///////////////////////
       document.getElementById("outdoorTable").textContent = hall.outdoorTable;
-      ////////////سفره فضای داخل///////////////////////
+      ////////////Indoor Table///////////////////////
       document.getElementById("indoorTable").textContent = hall.indoorTable;
-      ////////////لوکیشن///////////////////////
+      ////////////Location///////////////////////
       document.getElementById("location").textContent = hall.location;
 
-      ///////make number persin style///////////
+      // Convert numbers to Persian style
       //...1
       // const price_number = document.querySelectorAll(".price-number");
       // price_number.forEach((mov) => {
@@ -45,9 +45,9 @@ fetch("data/halls.json")
 
       // price_number.forEach((mov) => {
       //   if (mov.textContent === "ناعدد") {
-      //     console.log(` ${mov.textContent}:بی مقدار قیمت نداره  `);
+      //     console.log(` ${mov.textContent}: No value, no price `);
       //   } else {
-      //     console.log(` ${mov.textContent}:مقدار عددی`);
+      //     console.log(` ${mov.textContent}: Numeric value`);
       //   }
       // });
 
@@ -70,9 +70,9 @@ fetch("data/halls.json")
           mov.textContent = hall[ids];
         }
       });
-    } ////end
+    } // End
 
-    ////////////////////photo
+    // Photo
     const idphoto = hall.photo;
     document.querySelector(".photo").style.backgroundImage = hall.photo;
     console.log(idphoto);

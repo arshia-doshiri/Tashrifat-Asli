@@ -4,11 +4,11 @@
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
   if (preloader) {
-    // ابتدا شفافیت را صفر می‌کنیم
+    // Initially set opacity to zero
     preloader.style.opacity = "0";
     preloader.style.visibility = "hidden";
 
-    // بعد از نیم ثانیه کلاً حذفش می‌کنیم که جلوی کلیک را نگیرد
+    // After half a second, completely remove it to avoid blocking clicks
     setTimeout(() => {
       preloader.style.display = "none";
     }, 500);
@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
 });
 
 /* =========================================
-   2. Header & Scroll Animation
+   2. Header
    ========================================= */
 const header = document.getElementById("header");
 const scrollTopBtn = document.getElementById("scroll-top");
@@ -40,34 +40,34 @@ window.addEventListener("scroll", () => {
 /* =========================================
    3. Mobile Menu Toggle
    ========================================= */
-const navContainer = document.getElementById("nav-menu"); // المان پدر (nav)
+const navContainer = document.getElementById("nav-menu"); // Parent element (nav)
 const navToggle = document.getElementById("nav-toggle");
 const navClose = document.getElementById("nav-close");
 const navBackdrop = document.querySelector(".nav__backdrop");
 const navLinks = document.querySelectorAll(".nav__link");
 
-// باز کردن منو
+// Open menu
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navContainer.classList.add("show-menu");
   });
 }
 
-// بستن منو (با دکمه ضربدر)
+// Close menu (with close button)
 if (navClose) {
   navClose.addEventListener("click", () => {
     navContainer.classList.remove("show-menu");
   });
 }
 
-// بستن منو (با کلیک روی فضای خالی/بک‌دراپ)
+// Close menu (by clicking on empty space/backdrop)
 if (navBackdrop) {
   navBackdrop.addEventListener("click", () => {
     navContainer.classList.remove("show-menu");
   });
 }
 
-// بستن منو با کلیک روی هر لینک
+// Close menu by clicking on any link
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navContainer.classList.remove("show-menu");
@@ -178,7 +178,7 @@ const maxslider = slider.length;
 slider.forEach((cur, i) => {
   cur.style.transform = `translateX(${200 * i}%)`;
 });
-///////left
+// Left button
 left.addEventListener("click", function () {
   if (curslider === maxslider - 1) {
     curslider = 0;
@@ -190,7 +190,7 @@ left.addEventListener("click", function () {
   });
   console.log("ok");
 });
-////////////right
+// Right button
 right.addEventListener("click", function () {
   if (curslider === 0) {
     curslider = 0;
