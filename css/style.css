@@ -2221,7 +2221,7 @@ p.lead {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .hero {
+  .hero-hall {
     grid-template-columns: 1fr 320px;
   }
   .gallery > img {
@@ -2230,11 +2230,11 @@ p.lead {
   }
 }
 @media (max-width: 720px) {
-  .hero {
+  .hero-hall {
     grid-template-columns: 1fr;
     gap: 14px;
   }
-  .hero .photo {
+  .hero-hall .photo {
     min-height: 220px;
   }
   .grid {
