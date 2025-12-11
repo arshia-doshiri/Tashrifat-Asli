@@ -1113,6 +1113,10 @@ ul {
   transition: all 0.2s ease-in-out;
   transform: scale(1.5);
 }
+.right,
+.left {
+  color: black;
+}
 /* =========================================
    7. فوتر
    ========================================= */
@@ -2122,6 +2126,7 @@ ul {
   font-weight: 800;
   color: #102030;
   font-size: 18px;
+  z-index: 0;
 }
 /* h1 {
   margin: 0;
