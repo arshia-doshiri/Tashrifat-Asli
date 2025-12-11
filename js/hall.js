@@ -3,7 +3,7 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
 // 2) خوندن دیتابیس halls.json
-fetch("/data/halls.json")
+fetch("data/halls.json")
   .then((res) => res.json())
   .then((data) => {
     // 3) پیدا کردن تالار موردنظر
