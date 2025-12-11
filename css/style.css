@@ -1651,6 +1651,26 @@ ul {
   .info-header h1 {
     font-size: 2rem;
   }
+
+  .deti {
+    flex-direction: column;
+    background-color: #02121a;
+    height: max-content !important;
+  }
+
+  .details-test {
+    background-color: #f0c676;
+    width: 100% !important;
+  }
+  .img-details {
+    background-color: #f0c676;
+    height: 5rem;
+  }
+
+  details {
+    background-color: #06b6d4;
+    width: 100%;
+  }
 }
 .scroll-top {
   position: fixed;
@@ -2194,31 +2214,49 @@ p.lead {
   }
 }
 .deti {
+  position: relative;
   margin: auto;
-  width: 90%;
+  width: 80%;
   height: max-content;
   display: flex;
+  /* background-color: #02121a; */
 }
 .details-test {
   margin: auto;
-  width: 50%;
+  width: 60%;
   height: max-content;
   color: black;
+  /* background-color: #02121a; */
 }
 .img-details {
-  width: 45dvw;
-  height: 80dvh;
-  background-color: #000000 !important;
+  width: auto;
+  height: 70dvh;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 100;
+  position: relative;
+  transform: scale(1.1);
+}
+.img-details > img {
+  width: 90%;
+  border: 3px solid black;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.619);
 }
 
 .details-test > h2 {
-  margin: 20px auto 10px;
-  text-align: center;
+  text-align: start;
+}
+.details-test > p {
+  margin-inline-start: 1rem;
 }
 
 details {
   text-align: center;
-  width: 60%;
+  width: 100%;
   height: min-content;
   min-height: 5px;
   max-width: 700px;
@@ -2247,13 +2285,14 @@ details[open] {
 details p {
   color: #96999d;
   font-weight: 300;
+  font-size: 1.3rem;
 }
 
 summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 500;
+  font-weight: 300;
   cursor: pointer;
 }
 
@@ -2336,4 +2375,14 @@ details[open] .control-icon-expand {
   border-radius: 10px;
   animation: disable-an 2s linear infinite alternate-reverse;
   z-index: -1;
+}
+
+.map {
+  margin: 2rem auto;
+  width: 80dvw;
+  height: 80dvh;
+}
+.map > iframe {
+  width: 100%;
+  height: 100%;
 }
