@@ -2206,8 +2206,7 @@ p.lead {
   transform: translateY(1px);
 }
 .btn-moarefi.call {
-  background: linear-gradient(90deg, #0ea5a0, #06b6d4);
-  color: #02121a;
+  background-color: var(--color-secondary-light);
 }
 .btn-moarefi.book {
   background: linear-gradient(90deg, #334155, #0f1724);
@@ -2286,7 +2285,7 @@ p.lead {
   justify-content: end;
   border-radius: 50px;
   overflow: hidden;
-  z-index: 100;
+  z-index: 0;
   position: relative;
   transform: scale(1.1);
 }

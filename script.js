@@ -138,7 +138,7 @@ if (contactForm) {
    6. Reveal Animations on Scroll
    ========================================= */
 const revealElements = document.querySelectorAll(
-  ".service__card, .gallery__item, .about__img-box, .section__title"
+  ".service__card, .gallery__item, .about__img-box, .section__title , .deti ,.map , .client-say"
 );
 
 const revealOnScroll = () => {
