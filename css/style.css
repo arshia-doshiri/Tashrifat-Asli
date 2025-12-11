@@ -2066,14 +2066,15 @@ ul {
 }
 
 /* Hero */
-.hero {
+.hero-hall {
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 28px;
   align-items: stretch;
   margin-bottom: 20px;
+  margin-top: 8rem;
 }
-.hero .photo {
+.hero-hall .photo {
   border-radius: var(--radius);
   min-height: 320px;
   background-repeat: no-repeat;
@@ -2084,7 +2085,7 @@ ul {
   align-items: flex-end;
   padding: 28px;
 }
-.hero .photo .title {
+.hero-hall .photo .title {
   backdrop-filter: blur(6px) saturate(1.1);
   background: linear-gradient(
     90deg,
@@ -2095,7 +2096,7 @@ ul {
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
 }
-.hero .info {
+.hero-hall .info {
   background-color: var(--color-secondary);
   border-radius: var(--radius);
   padding: 18px;
