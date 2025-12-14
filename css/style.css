@@ -1726,6 +1726,22 @@ ul {
     height: 50dvh !important;
     overflow: hidden;
   }
+
+  .card:after {
+    /* ttsshh */
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.074) 0%,
+      rgba(0, 0, 0, 0.1) 30%,
+      /* rgba(91, 140, 83, 0.6) 60%, */ var(--color-primary-dark) 60%,
+      /* استفاده از رنگ زیتونی در گرادینت */ rgba(0, 0, 0, 0.8) 100%
+    );
+    opacity: 0.8;
+  }
+
+  .content {
+    backdrop-filter: blur(2px);
+  }
 }
 .scroll-top {
   position: fixed;
@@ -1923,9 +1939,6 @@ ul {
   padding: 1rem;
   transition: transform var(--d) var(--e);
   z-index: 1;
-  /* background-color: rgba(255, 255, 255, 0.01);
-  border-radius: 50px;
-  backdrop-filter: blur(2px); */
 }
 
 .title {
@@ -1986,10 +1999,10 @@ ul {
   background-image: url(../image/card-img.JPG);
 }
 .card:nth-child(2):before {
-  background-image: url(../image/card-img.JPG);
+  background-image: url(https://images.unsplash.com/photo-1670529776180-60e4132ab90c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2VkZGluZyUyMHZlbnVlfGVufDB8fDB8fHww);
 }
 .card:nth-child(3):before {
-  background-image: url(../image/card-img.JPG);
+  background-image: url(https://i.pinimg.com/736x/7b/05/b8/7b05b841bc0b1ed7121b74f2c2d0188d.jpg);
 }
 
 /* انیمیشن‌ها در دسکتاپ */
