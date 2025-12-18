@@ -76,4 +76,8 @@ fetch("data/halls.json")
     const idphoto = hall.photo;
     document.querySelector(".photo").style.backgroundImage = hall.photo;
     console.log(idphoto);
+
+    ///adress bar
+    const adreesbar = document.querySelector("title");
+    adreesbar.textContent = `معرفی - ${hall.tt}`;
   });

@@ -11,7 +11,8 @@
     "indoorTable": 10000000,
     "title": "تالار قصر طلایی",
     "location": "تهران - تجریش",
-    "photo": "url(image/card-img.JPG)"
+    "photo": "url(image/card-img.JPG)",
+    "tt": "تالار قصر طلایی"
   },
   {
     "id": 2,
