@@ -10,7 +10,8 @@
     "outdoorTable": 15000000,
     "indoorTable": 10000000,
     "title": "تالار قصر طلایی",
-    "location": "تهران - تجریش"
+    "location": "تهران - تجریش",
+    "photo": "url(image/card-img.JPG)"
   },
   {
     "id": 2,
@@ -23,7 +24,8 @@
     "outdoorTable": 35000000,
     "indoorTable": 20000000,
     "title": "قصر اصلی",
-    "location": "کرج - جاده ۳۵ - فرعی ۱۲"
+    "location": "کرج - جاده ۳۵ - فرعی ۱۲",
+    "photo": "url(https://images.unsplash.com/photo-1670529776180-60e4132ab90c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2VkZGluZyUyMHZlbnVlfGVufDB8fDB8fHww)"
   },
   {
     "id": 3,
@@ -37,6 +39,6 @@
     "indoorTable": 17000000,
     "title": "عمارت زیبا",
     "location": "تهران - نیاوران - خیابان صفایی - برج نگین رضا",
-    "photo": "url(image/3.jpg)"
+    "photo": "url(https://i.pinimg.com/736x/7b/05/b8/7b05b841bc0b1ed7121b74f2c2d0188d.jpg)"
   }
 ]
