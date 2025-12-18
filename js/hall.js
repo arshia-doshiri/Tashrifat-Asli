@@ -79,5 +79,5 @@ fetch("data/halls.json")
 
     ///adress bar
     const adreesbar = document.querySelector("title");
-    adreesbar.textContent = `معرفی - ${hall.tt}`;
+    adreesbar.textContent = `معرفی | ${hall.adress_bar}`;
   });
