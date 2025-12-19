@@ -75,9 +75,38 @@ fetch("data/halls.json")
     // Photo
     const idphoto = hall.photo;
     document.querySelector(".photo").style.backgroundImage = hall.photo;
-    console.log(idphoto);
 
     ///adress bar
     const adreesbar = document.querySelector("title");
     adreesbar.textContent = `معرفی | ${hall.adress_bar}`;
   });
+
+/////////// test kar
+const a_menu = document.querySelectorAll(".menu-subject");
+const img_menu = document.querySelector(".img-menu");
+const back_info_main = document.querySelector(".back-info-main");
+const menu_info = document.querySelector(".menu-info");
+const book = document.querySelector(".book");
+const info_main = document.querySelector(".info-main");
+
+a_menu.forEach((mov) => {
+  mov.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (mov.getAttribute("data-img")) {
+      img_menu.style.backgroundImage = mov.getAttribute("data-img");
+      img_menu.style.opacity = "1";
+    }
+  });
+});
+/////
+back_info_main.addEventListener("click", function (e) {
+  e.preventDefault();
+  menu_info.classList.toggle("hidden");
+  info_main.classList.toggle("hidden");
+});
+
+book.addEventListener("click", function (e) {
+  e.preventDefault();
+  info_main.classList.toggle("hidden");
+  menu_info.classList.toggle("hidden");
+});

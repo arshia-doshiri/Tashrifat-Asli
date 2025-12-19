@@ -133,6 +133,19 @@ ul {
   background: var(--color-secondary);
 }
 
+.hidden {
+  display: none !important;
+}
+
+.in {
+  z-index: 2;
+  opacity: 1;
+}
+.out {
+  z-index: -1;
+  opacity: 0;
+}
+
 /* =========================================
    2. کلاس‌های کاربردی (Utilities)
    ========================================= */
@@ -2073,7 +2086,7 @@ ul {
 
 /* ///////////////////////////////////////////////
   ///////////////////////////////////////////////
-  ////////////////////Moarefi.html/////////////////// */
+  ////////////////////hall.html/////////////////// */
 
 .moarefi {
   color: #ffffff;
@@ -2129,6 +2142,45 @@ ul {
   gap: 12px;
   box-shadow: 0 8px 28px rgba(2, 6, 23, 0.6), 0 0 10px 0px rgb(0, 0, 0) inset;
 }
+
+.menu-info {
+  height: 75dvh;
+  transition: all 5s;
+  z-index: 20;
+}
+
+.menu-title {
+  width: 100%;
+  height: 2rem;
+  background-color: rgba(255, 255, 255, 0.295);
+  border-radius: 15px;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 10px black inset;
+  display: flex;
+  justify-content: space-around;
+  color: rgb(255, 255, 255);
+}
+.menu-list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu-value > a:hover {
+  scale: 1.05;
+  transform: translateY(-1px);
+}
+
+.img-menu {
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: all 0.75s;
+}
+
 .brand {
   display: flex;
   gap: 12px;
