@@ -2157,12 +2157,13 @@ ul {
   backdrop-filter: blur(2px);
   box-shadow: 0 0 10px black inset;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   color: rgb(255, 255, 255);
 }
 .menu-list {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .menu-value > a:hover {

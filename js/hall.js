@@ -86,8 +86,9 @@ const a_menu = document.querySelectorAll(".menu-subject");
 const img_menu = document.querySelector(".img-menu");
 const back_info_main = document.querySelector(".back-info-main");
 const menu_info = document.querySelector(".menu-info");
-const book = document.querySelector(".book");
+const book = document.querySelectorAll(".book");
 const info_main = document.querySelector(".info-main");
+const menu_show_mobile = document.querySelector(".menu-show-mobile");
 
 a_menu.forEach((mov) => {
   mov.addEventListener("click", function (e) {
@@ -105,8 +106,10 @@ back_info_main.addEventListener("click", function (e) {
   info_main.classList.toggle("hidden");
 });
 
-book.addEventListener("click", function (e) {
-  e.preventDefault();
-  info_main.classList.toggle("hidden");
-  menu_info.classList.toggle("hidden");
+book.forEach((mov) => {
+  mov.addEventListener("click", function (e) {
+    e.preventDefault();
+    info_main.classList.toggle("hidden");
+    menu_info.classList.toggle("hidden");
+  });
 });
