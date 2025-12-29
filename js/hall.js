@@ -79,37 +79,81 @@ fetch("data/halls.json")
     ///adress bar
     const adreesbar = document.querySelector("title");
     adreesbar.textContent = `معرفی | ${hall.adress_bar}`;
+
+    //menu order
+
+    const menu_subject = document.querySelectorAll("#menu-subject");
+    menu_subject.forEach((mov, i) => {
+      const test = hall[`dataImg_${i + 1}`];
+
+      mov.setAttribute("data-img", test);
+      console.log(i + 1);
+    });
+
+    // console.log(document.querySelector("#menu-subject"));
+
+    const a_menu = document.querySelectorAll(".menu-subject");
+    const img_menu = document.querySelector(".img-menu");
+    const back_info_main = document.querySelector(".back-info-main");
+    const menu_info = document.querySelector(".menu-info");
+    const book = document.querySelectorAll(".book");
+    const info_main = document.querySelector(".info-main");
+    const menu_show_mobile = document.querySelector(".menu-show-mobile");
+
+    a_menu.forEach((mov) => {
+      mov.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (mov.getAttribute("data-img")) {
+          img_menu.style.backgroundImage = mov.getAttribute("data-img");
+          img_menu.style.opacity = "1";
+        }
+      });
+    });
+    ///....
+    back_info_main.addEventListener("click", function (e) {
+      e.preventDefault();
+      menu_info.classList.toggle("hidden");
+      info_main.classList.toggle("hidden");
+    });
+
+    book.forEach((mov) => {
+      mov.addEventListener("click", function (e) {
+        e.preventDefault();
+        info_main.classList.toggle("hidden");
+        menu_info.classList.toggle("hidden");
+      });
+    });
   });
 
 /////////// test kar
-const a_menu = document.querySelectorAll(".menu-subject");
-const img_menu = document.querySelector(".img-menu");
-const back_info_main = document.querySelector(".back-info-main");
-const menu_info = document.querySelector(".menu-info");
-const book = document.querySelectorAll(".book");
-const info_main = document.querySelector(".info-main");
-const menu_show_mobile = document.querySelector(".menu-show-mobile");
+// const a_menu = document.querySelectorAll(".menu-subject");
+// const img_menu = document.querySelector(".img-menu");
+// const back_info_main = document.querySelector(".back-info-main");
+// const menu_info = document.querySelector(".menu-info");
+// const book = document.querySelectorAll(".book");
+// const info_main = document.querySelector(".info-main");
+// const menu_show_mobile = document.querySelector(".menu-show-mobile");
 
-a_menu.forEach((mov) => {
-  mov.addEventListener("click", function (e) {
-    e.preventDefault();
-    if (mov.getAttribute("data-img")) {
-      img_menu.style.backgroundImage = mov.getAttribute("data-img");
-      img_menu.style.opacity = "1";
-    }
-  });
-});
-/////
-back_info_main.addEventListener("click", function (e) {
-  e.preventDefault();
-  menu_info.classList.toggle("hidden");
-  info_main.classList.toggle("hidden");
-});
+// a_menu.forEach((mov) => {
+//   mov.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     if (mov.getAttribute("data-img")) {
+//       img_menu.style.backgroundImage = mov.getAttribute("data-img");
+//       img_menu.style.opacity = "1";
+//     }
+//   });
+// });
+// /////
+// back_info_main.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   menu_info.classList.toggle("hidden");
+//   info_main.classList.toggle("hidden");
+// });
 
-book.forEach((mov) => {
-  mov.addEventListener("click", function (e) {
-    e.preventDefault();
-    info_main.classList.toggle("hidden");
-    menu_info.classList.toggle("hidden");
-  });
-});
+// book.forEach((mov) => {
+//   mov.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     info_main.classList.toggle("hidden");
+//     menu_info.classList.toggle("hidden");
+//   });
+// });

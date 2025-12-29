@@ -42,6 +42,9 @@
     "title": "عمارت زیبا",
     "location": "تهران - نیاوران - خیابان صفایی - برج نگین رضا",
     "photo": "url(https://i.pinimg.com/736x/7b/05/b8/7b05b841bc0b1ed7121b74f2c2d0188d.jpg)",
-    "adress_bar": "عمارت زیبا"
+    "adress_bar": "عمارت زیبا",
+    "dataImg_1": "url(image/menu-1.JPG)",
+    "dataImg_2": "url(image/menu-02.JPG)",
+    "dataImg_3": "url(image/menu-03.JPG)"
   }
 ]
