@@ -109,6 +109,13 @@ fetch("data/halls.json")
         }
       });
     });
+
+    //..scale img menu
+
+    img_menu.addEventListener("click", function () {
+      img_menu.classList.toggle("img-menu-scale");
+    });
+
     ///....
     back_info_main.addEventListener("click", function (e) {
       e.preventDefault();
@@ -125,7 +132,7 @@ fetch("data/halls.json")
     });
   });
 
-/////////// test kar
+///////// test kar
 // const a_menu = document.querySelectorAll(".menu-subject");
 // const img_menu = document.querySelector(".img-menu");
 // const back_info_main = document.querySelector(".back-info-main");

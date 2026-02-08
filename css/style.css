@@ -2181,6 +2181,10 @@ ul {
   opacity: 0;
   transition: all 0.75s;
 }
+.img-menu-scale {
+  scale: 1.5;
+  margin-top: -3rem;
+}
 
 .brand {
   display: flex;
