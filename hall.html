@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
   <head>
     <!-- /////////////////meta-part -->
@@ -152,6 +152,9 @@
                 <div class="small"><p id="visit"></p></div>
               </div>
               <div class="value">روزانه</div>
+              <i class="fa fa-info-circle info-cell" aria-hidden="true">
+                <p hidden>روزانه : از شنبه تا چهارشنبه</p>
+              </i>
             </div>
             <div class="cell">
               <div>
@@ -159,6 +162,9 @@
                 <div class="small">حداکثر</div>
               </div>
               <div class="value"><p id="capacity"></p></div>
+              <i class="fa fa-info-circle info-cell" aria-hidden="true">
+                <p hidden>حداکثر نفرات ۶۰۰ نفر</p>
+              </i>
             </div>
 
             <div class="cell">
@@ -167,13 +173,19 @@
                 <div class="small">مراسم >100 نفر</div>
               </div>
               <div class="value">ورودی رایگان</div>
+              <i class="fa fa-info-circle info-cell" aria-hidden="true">
+                <p hidden>بالای ۱۰۰ نفر ورودی رایگان میباشد</p>
+              </i>
             </div>
             <div class="cell">
               <div>
                 <div class="label">فرمول هزینه</div>
-                <div class="small">ساده</div>
+                <!-- <div class="small">ساده</div> -->
               </div>
-              <div class="value">تعداد × منو</div>
+              <div class="value">تعداد مهمان × منوی انتخابی</div>
+              <i class="fa fa-info-circle info-cell" aria-hidden="true">
+                <p hidden>تعداد مهمان × منوی انتخابی</p>
+              </i>
             </div>
 
             <div class="cell">
@@ -182,6 +194,9 @@
                 <div class="small">قیمت هر شب</div>
               </div>
               <div class="value"><p id="dj" class="price-number"></p></div>
+              <i class="fa fa-info-circle info-cell" aria-hidden="true">
+                <p hidden>فعلا توضیخی داده نشده</p>
+              </i>
             </div>
             <div class="cell">
               <div>
@@ -191,6 +206,15 @@
               <div class="value">
                 <p id="videographer" class="price-number"></p>
               </div>
+              <i class="fa fa-info-circle info-cell" aria-hidden="true">
+                <p hidden>
+                  - فیلم برداری ۳ دوربینه DSLR , R3 , R4 <br />
+                  - با heli shot<br />
+                  - و DJI RONIN <br />
+                  - فرمالیته روز مراسم با ۷ لیته عکس با لنز های G master <br />
+                  ✅ روی منوی آخر رایگان هزینه فیلم برداری
+                </p>
+              </i>
             </div>
           </div>
           <!-- /////////grid-left////////////
@@ -230,34 +254,23 @@
           <ul class="return-to-main-info">
             <li class="menu-value">
               <a href="" class="back-info-main">بازگشت</a>
+              <p href="" class="section__subtitle">دیدن منو ها</p>
             </li>
           </ul>
 
           <section class="menu-title">
             <ul class="menu-list">
               <li class="menu-value">
-                <a
-                  href=""
-                  class="section__subtitle menu-subject"
-                  id="menu-subject"
-                  >منوی 1</a
-                >
+                <a href="" class="menu-subject" id="menu-subject"> 1</a>
               </li>
               <li class="menu-value">
-                <a
-                  href=""
-                  class="section__subtitle menu-subject"
-                  id="menu-subject"
-                  >منوی 2</a
-                >
+                <a href="" class="menu-subject" id="menu-subject"> 2</a>
               </li>
               <li class="menu-value">
-                <a
-                  href=""
-                  class="section__subtitle menu-subject"
-                  id="menu-subject"
-                  >منوی 3</a
-                >
+                <a href="" class="menu-subject" id="menu-subject"> 3</a>
+              </li>
+              <li class="menu-value">
+                <a href="" class="menu-subject" id="menu-subject"> 4</a>
               </li>
             </ul>
           </section>
@@ -417,7 +430,9 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
       <div class="address-text">
-        <p class="highlight">در اینجا آدرس متنی قرار داده میشود</p>
+        <a href="#" class="highlight adress-map"
+          >در اینجا آدرس متنی قرار داده میشود</a
+        >
       </div>
     </section>
 
@@ -437,28 +452,48 @@
 
         <div class="gallery__grid">
           <div class="gallery__item item--large">
-            <img src="image/img-1.jpg" alt="Gallery 1" loading="lazy" />
+            <img
+              src="image/img-1.jpg"
+              alt="Gallery 1"
+              loading="lazy"
+              class="gallery-id"
+            />
             <div class="gallery__info">
               <h3>عروسی کلاسیک</h3>
               <span>تهران، عمارت دانیال</span>
             </div>
           </div>
           <div class="gallery__item">
-            <img src="image/img-2.jpg" alt="Gallery 2" loading="lazy" />
+            <img
+              src="image/img-2.jpg"
+              alt="Gallery 2"
+              class="gallery-id"
+              loading="lazy"
+            />
             <div class="gallery__info">
               <h3>تولد لاکچری</h3>
               <span>تم طلایی مشکی</span>
             </div>
           </div>
           <div class="gallery__item">
-            <img src="image/img-3.jpg" alt="Gallery 3" loading="lazy" />
+            <img
+              src="image/img-3.jpg"
+              alt="Gallery 3"
+              class="gallery-id"
+              loading="lazy"
+            />
             <div class="gallery__info">
               <h3>نامزدی</h3>
               <span>فضای باز</span>
             </div>
           </div>
           <div class="gallery__item">
-            <img src="image/img-4.jpg" alt="Gallery 4" loading="lazy" />
+            <img
+              src="image/img-4.jpg"
+              alt="Gallery 4"
+              class="gallery-id"
+              loading="lazy"
+            />
             <div class="gallery__info">
               <h3>همایش شرکتی</h3>
               <span>سالن همایش‌ها</span>

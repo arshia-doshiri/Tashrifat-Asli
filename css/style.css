@@ -1800,7 +1800,9 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
 }
 
 .loader-content {
@@ -2009,13 +2011,13 @@ ul {
 
 /* تنظیم تصاویر بک گراند برای هر کارت به صورت جداگانه در CSS برای تمیزی HTML */
 .card:nth-child(1):before {
-  background-image: url(../image/card-img.JPG);
+  background-image: url(../image/bagh-markazi/7.jpg);
 }
 .card:nth-child(2):before {
-  background-image: url(https://images.unsplash.com/photo-1670529776180-60e4132ab90c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2VkZGluZyUyMHZlbnVlfGVufDB8fDB8fHww);
+  background-image: url(../image/kahk-2/10.jpg);
 }
 .card:nth-child(3):before {
-  background-image: url(https://i.pinimg.com/736x/7b/05/b8/7b05b841bc0b1ed7121b74f2c2d0188d.jpg);
+  background-image: url(../image/kakh-3/1.jpg);
 }
 
 /* انیمیشن‌ها در دسکتاپ */
@@ -2031,7 +2033,9 @@ ul {
   .content > *:not(.title) {
     opacity: 0;
     transform: translateY(1rem);
-    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+    transition:
+      transform var(--d) var(--e),
+      opacity var(--d) var(--e);
   }
 
   .card:hover,
@@ -2140,7 +2144,9 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  box-shadow: 0 8px 28px rgba(2, 6, 23, 0.6), 0 0 10px 0px rgb(0, 0, 0) inset;
+  box-shadow:
+    0 8px 28px rgba(2, 6, 23, 0.6),
+    0 0 10px 0px rgb(0, 0, 0) inset;
 }
 
 .menu-info {
@@ -2166,9 +2172,32 @@ ul {
   /* flex-wrap: wrap; */
 }
 
+.menu-value {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-subject {
+  color: rgb(255, 255, 255);
+  background-color: #ffffff1d;
+  width: 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  margin: 0 2px;
+}
+
+.menu-list:has(.menu-subject:hover) .menu-subject:not(:hover) {
+  opacity: 0.7;
+  filter: blur(1.5px);
+}
+
 .menu-value > a:hover {
   scale: 1.05;
   transform: translateY(-1px);
+  background-color: #ffffffbb;
+  color: black;
+  transition: all 0.6s ease-out;
 }
 
 .img-menu {
@@ -2225,6 +2254,7 @@ p.lead {
   margin-top: 6px;
 }
 .cell {
+  position: relative;
   background: var(--glass);
   padding: 10px 12px;
   border-radius: 10px;
@@ -2232,6 +2262,16 @@ p.lead {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
+}
+
+.cell > .fa-info-circle {
+  position: absolute;
+  bottom: 3px;
+  inset-inline-end: 10px;
+  scale: 0.9;
+}
+.cell > .fa-info-circle:hover {
+  color: rgba(43, 43, 133, 0.783);
 }
 .label {
   font-size: 13px;
@@ -2278,7 +2318,9 @@ p.lead {
   text-decoration: none;
   font-weight: 700;
   box-shadow: 0 8px 24px rgba(2, 6, 23, 0.6);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 .btn-moarefi:active {
   transform: translateY(1px);

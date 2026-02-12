@@ -18,9 +18,8 @@ fetch("data/halls.json")
       ////////////Visit///////////////////////
       document.getElementById("visit").textContent = hall.visit;
       ////////////Capacity///////////////////////
-      document.getElementById(
-        "capacity"
-      ).textContent = `نفر : ${hall.capacity}`;
+      document.getElementById("capacity").textContent =
+        `نفر : ${hall.capacity}`;
       ////////////DJ///////////////////////
       document.getElementById("dj").textContent = hall.dj;
       ////////////Videographer///////////////////////
@@ -76,6 +75,14 @@ fetch("data/halls.json")
     const idphoto = hall.photo;
     document.querySelector(".photo").style.backgroundImage = hall.photo;
 
+    // gallery
+    document
+      .querySelectorAll(".gallery__item > .gallery-id")
+      .forEach((mov, i) => {
+        const gallery_id = hall[`gallery${i + 1}`];
+        mov.src = `http://127.0.0.1:5500/${gallery_id}`;
+      });
+
     ///adress bar
     const adreesbar = document.querySelector("title");
     adreesbar.textContent = `معرفی | ${hall.adress_bar}`;
@@ -87,7 +94,7 @@ fetch("data/halls.json")
       const test = hall[`dataImg_${i + 1}`];
 
       mov.setAttribute("data-img", test);
-      console.log(i + 1);
+      // console.log(i + 1);
     });
 
     // console.log(document.querySelector("#menu-subject"));
@@ -130,6 +137,26 @@ fetch("data/halls.json")
         menu_info.classList.toggle("hidden");
       });
     });
+
+    //// info-cell
+    const info_cell = document.querySelectorAll(".info-cell");
+    const info_cell_text = document.querySelectorAll(".info-cell>p");
+
+    //..start
+    info_cell.forEach((mov, i) => {
+      mov.addEventListener("click", function () {
+        const content_cell = mov.firstElementChild.textContent;
+        const test = content_cell.padStart(content_cell.length + 1, "-");
+
+        // alert(content_cell);
+        alert(test);
+      });
+    });
+
+    //adress-map
+    document.querySelector(".adress-map").textContent = hall.location;
+
+    //...end
   });
 
 ///////// test kar
