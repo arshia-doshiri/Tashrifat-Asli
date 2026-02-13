@@ -83,12 +83,19 @@ fetch("data/halls.json")
     //     mov.src = `http://127.0.0.1:5500/${gallery_id}`;
     //   });
 
+    // document
+    //   .querySelectorAll(".gallery__item > .gallery-id")
+    //   .forEach((mov, i) => {
+    //     const gallery_id = hall[`gallery${i + 1}`];
+    //     // mov.src = `http://127.0.0.1:5500/${gallery_id}`;
+    //     mov.src = gallery_id;
+    //   });
+
     document
       .querySelectorAll(".gallery__item > .gallery-id")
       .forEach((mov, i) => {
         const gallery_id = hall[`gallery${i + 1}`];
-        // mov.src = `http://127.0.0.1:5500/${gallery_id}`;
-        mov.src = gallery_id;
+        mov.src = `./${gallery_id}`;
       });
 
     ///adress bar
