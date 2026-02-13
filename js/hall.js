@@ -171,6 +171,10 @@ fetch("data/halls.json")
     //adress-map
     document.querySelector(".adress-map").textContent = hall.location;
 
+    //map
+    const map_loc = document.querySelector("iframe");
+    map_loc.src = hall.map_location;
+
     //...end
   });
 

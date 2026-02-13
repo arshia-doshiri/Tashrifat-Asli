@@ -2272,6 +2272,7 @@ p.lead {
 }
 .cell > .fa-info-circle:hover {
   color: rgba(43, 43, 133, 0.783);
+  cursor: pointer;
 }
 .label {
   font-size: 13px;
