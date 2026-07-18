@@ -2399,7 +2399,7 @@ p.lead {
   /* background-color: #02121a; */
 }
 .img-details {
-  width: auto;
+  width: 60%;
   height: 70dvh;
   display: flex;
   align-items: center;
