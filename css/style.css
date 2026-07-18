@@ -1333,7 +1333,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../image/img-3.jpg") no-repeat center/cover;
+  background: url("../image/img-3.webp") no-repeat center/cover;
   opacity: 0.2;
   mix-blend-mode: overlay;
 }
@@ -2011,13 +2011,13 @@ ul {
 
 /* تنظیم تصاویر بک گراند برای هر کارت به صورت جداگانه در CSS برای تمیزی HTML */
 .card:nth-child(1):before {
-  background-image: url(../image/bagh-markazi/7.jpg);
+  background-image: url(../image/bagh-markazi/2.webp);
 }
 .card:nth-child(2):before {
-  background-image: url(../image/kahk-2/10.jpg);
+  background-image: url(../image/kahk-2/10.webp);
 }
 .card:nth-child(3):before {
-  background-image: url(../image/kakh-3/1.jpg);
+  background-image: url(../image/kakh-3/1.webp);
 }
 
 /* انیمیشن‌ها در دسکتاپ */
