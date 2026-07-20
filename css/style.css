@@ -2399,7 +2399,8 @@ p.lead {
   /* background-color: #02121a; */
 }
 .img-details {
-  width: 60%;
+  margin: auto;
+  width: 70%;
   height: 70dvh;
   display: flex;
   align-items: center;
