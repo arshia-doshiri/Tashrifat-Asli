@@ -125,13 +125,53 @@ fetch("data/halls.json")
     a_menu.forEach((mov) => {
       mov.addEventListener("click", function (e) {
         e.preventDefault();
-        if (mov.getAttribute("data-img")) {
-          img_menu.style.backgroundImage = mov.getAttribute("data-img");
+
+        const menuImageUrl = mov.getAttribute("data-img");
+        if (!menuImageUrl) return;
+
+        // بررسی اینکه آیا کاربر در حالت لپ‌تاپ (صفحه بزرگتر یا مساوی 1024) قرار دارد
+        const isLaptop = window.innerWidth >= 1024;
+
+        if (isLaptop) {
+          // ۱. در حالت لپ‌تاپ: عکس منو مستقیماً روی پس‌زمینه بخش سمت راست (.photo) اعمال می‌شود
+          const photoContainer = document.querySelector(".photo");
+          photoContainer.style.backgroundImage = menuImageUrl;
+          photoContainer.style.backgroundSize = "contain";
+          photoContainer.style.backgroundPosition = "center"; // عکس رو میاره وسط
+
+          // مخفی کردن موقت متون داخل عکس (مثل نام عمارت و آدرس) برای دیده شدن بهتر منو
+          if (photoContainer.firstElementChild) {
+            photoContainer.firstElementChild.style.opacity = "0";
+            photoContainer.firstElementChild.style.pointerEvents = "none";
+          }
+
+          // پنهان نگه داشتن باکس عکس پایینی در دسکتاپ
+          img_menu.style.opacity = "0";
+          img_menu.style.display = "none";
+        } else {
+          // ۲. در حالت موبایل: همان رفتار قبلی خودتان حفظ می‌شود و عکس زیر دکمه‌ها می‌رود
+          img_menu.style.display = "block";
+          img_menu.style.backgroundImage = menuImageUrl;
           img_menu.style.opacity = "1";
         }
       });
     });
 
+    // وقتی کاربر دکمه "بازگشت" از منوها را می‌زند، عکس عمارت باید به حالت اولش برگردد
+    back_info_main.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // برگرداندن عکس اصلی عمارت که در ابتدای لود صفحه ست شده بود
+      const photoContainer = document.querySelector(".photo");
+      photoContainer.style.backgroundImage = hall.photo;
+      photoContainer.style.backgroundSize = "cover";
+
+      // ظاهر کردن دوباره متن‌های روی عکس عمارت
+      if (photoContainer.firstElementChild) {
+        photoContainer.firstElementChild.style.opacity = "1";
+        photoContainer.firstElementChild.style.pointerEvents = "auto";
+      }
+    });
     //..scale img menu
 
     img_menu.addEventListener("click", function () {
@@ -174,6 +214,8 @@ fetch("data/halls.json")
     //map
     const map_loc = document.querySelector("iframe");
     map_loc.src = hall.map_location;
+
+    /////// test laptop menu show
 
     //...end
   });
