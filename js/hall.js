@@ -126,45 +126,44 @@ fetch("data/halls.json")
       mov.addEventListener("click", function (e) {
         e.preventDefault();
 
+        // حذف کلاس active از تمام دکمه‌های منو
+        a_menu.forEach((btn) => btn.classList.remove("active-menu"));
+        // اضافه کردن کلاس active به دکمه کلیک شده
+        this.classList.add("active-menu");
+
         const menuImageUrl = mov.getAttribute("data-img");
         if (!menuImageUrl) return;
 
-        // بررسی اینکه آیا کاربر در حالت لپ‌تاپ (صفحه بزرگتر یا مساوی 1024) قرار دارد
         const isLaptop = window.innerWidth >= 1024;
 
         if (isLaptop) {
-          // ۱. در حالت لپ‌تاپ: عکس منو مستقیماً روی پس‌زمینه بخش سمت راست (.photo) اعمال می‌شود
           const photoContainer = document.querySelector(".photo");
           photoContainer.style.backgroundImage = menuImageUrl;
           photoContainer.style.backgroundSize = "contain";
           photoContainer.style.backgroundPosition = "center";
           photoContainer.style.backgroundRepeat = "no-repeat";
 
-          // 🎨 استایل‌های گرافیکی برای جذاب‌تر شدن باکس عکس منو
-          photoContainer.style.backgroundColor = "rgba(11, 18, 32, 0.85)"; // پس‌زمینه تیره شیک و عمیق
-          photoContainer.style.backdropFilter = "blur(12px)"; // حالت شیشه‌ای مات (Glassmorphism)
-          photoContainer.style.border = "1px solid rgba(215, 163, 74, 0.3)"; // بوردر طلایی خیلی ظریف و لوکس
-          photoContainer.style.borderRadius = "var(--radius)"; // هماهنگ با انحنای بقیه بخش‌های سایت
+          photoContainer.style.backgroundColor = "rgba(11, 18, 32, 0.85)";
+          photoContainer.style.backdropFilter = "blur(12px)";
+          photoContainer.style.border = "1px solid rgba(215, 163, 74, 0.3)";
+          photoContainer.style.borderRadius = "var(--radius)";
           photoContainer.style.boxShadow =
             "inset 0 0 30px rgba(0, 0, 0, 0.7), 0 12px 32px rgba(0, 0, 0, 0.5)";
-          // مخفی کردن موقت متون داخل عکس (مثل نام عمارت و آدرس) برای دیده شدن بهتر منو
+
           if (photoContainer.firstElementChild) {
             photoContainer.firstElementChild.style.opacity = "0";
             photoContainer.firstElementChild.style.pointerEvents = "none";
           }
 
-          // پنهان نگه داشتن باکس عکس پایینی در دسکتاپ
           img_menu.style.opacity = "0";
           img_menu.style.display = "none";
         } else {
-          // ۲. در حالت موبایل: همان رفتار قبلی خودتان حفظ می‌شود و عکس زیر دکمه‌ها می‌رود
           img_menu.style.display = "block";
           img_menu.style.backgroundImage = menuImageUrl;
           img_menu.style.opacity = "1";
         }
       });
     });
-
     // وقتی کاربر دکمه "بازگشت" از منوها را می‌زند، عکس عمارت باید به حالت اولش برگردد
     back_info_main.addEventListener("click", function (e) {
       e.preventDefault();
@@ -202,26 +201,48 @@ fetch("data/halls.json")
     book.forEach((mov) => {
       mov.addEventListener("click", function (e) {
         e.preventDefault();
-        info_main.classList.toggle("hidden");
-        menu_info.classList.toggle("hidden");
-      });
-    });
+        info_main.classList.add("hidden");
+        menu_info.classList.remove("hidden");
 
-    //// info-cell
+        // ۱. پیدا کردن منوی اول
+        const firstMenuBtn = document.querySelector(".menu-subject");
+
+        // ۲. تحریک کلیک روی منوی اول برای لود شدن عکس منوی شماره ۱
+        if (firstMenuBtn) {
+          firstMenuBtn.click();
+        }
+
+        // ۳. اسکرول نرم روی بخش منو در حالت موبایل
+        if (window.innerWidth < 1024) {
+          menu_info.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    }); //// info-cell
+    //// info-cell با پشتیبانی از SweetAlert2
     const info_cell = document.querySelectorAll(".info-cell");
-    const info_cell_text = document.querySelectorAll(".info-cell>p");
 
-    //..start
-    info_cell.forEach((mov, i) => {
+    info_cell.forEach((mov) => {
       mov.addEventListener("click", function () {
-        const content_cell = mov.firstElementChild.textContent;
-        const test = content_cell.padStart(content_cell.length + 1, "-");
+        // خواندن متن داخل تگ p درون آیكون
+        const content_cell = mov.querySelector("p")
+          ? mov.querySelector("p").innerText
+          : "";
 
-        // alert(content_cell);
-        alert(test);
+        if (content_cell.trim() !== "") {
+          Swal.fire({
+            title: "اطلاعات مکمل",
+            html: `<div style="font-family: Vazirmatn, sans-serif; line-height: 1.8; color: #333;">${content_cell.replace(/\n/g, "<br>")}</div>`,
+            icon: "info",
+            confirmButtonText: "متوجه شدم",
+            confirmButtonColor: "#d7a34a", // رنگ طلایی هماهنگ با تم سایت
+            background: "#fff",
+            customClass: {
+              popup: "swal-rtl-popup",
+            },
+          });
+        }
       });
     });
-
     //adress-map
     document.querySelector(".adress-map").textContent = hall.location;
 
@@ -229,7 +250,43 @@ fetch("data/halls.json")
     const map_loc = document.querySelector("iframe");
     map_loc.src = hall.map_location;
 
-    /////// test laptop menu show
+    // ==========================================
+    // 1. مدیریت باز و بسته شدن منوی موبایل
+    // ==========================================
+    const navToggle = document.getElementById("nav-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    const navBackdrop = document.querySelector(".nav__backdrop");
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("show-menu");
+        navToggle.classList.toggle("animate-toggle");
+      });
+    }
+
+    if (navBackdrop && navMenu) {
+      navBackdrop.addEventListener("click", () => {
+        navMenu.classList.remove("show-menu");
+        if (navToggle) navToggle.classList.remove("animate-toggle");
+      });
+    }
+
+    // ==========================================
+    // 2. تغییر حالت پس‌زمینه هدر موقع اسکرول (مات/سفید شدن)
+    // ==========================================
+    const header = document.getElementById("header");
+
+    function scrollHeader() {
+      if (window.scrollY >= 50) {
+        header.classList.add("scroll-header");
+      } else {
+        header.classList.remove("scroll-header");
+      }
+    }
+
+    window.addEventListener("scroll", scrollHeader);
+    // اجرای اولیه در صورت لود صفحه در حالت اسکرول‌شده
+    scrollHeader();
 
     //...end
   });
