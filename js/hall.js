@@ -137,8 +137,16 @@ fetch("data/halls.json")
           const photoContainer = document.querySelector(".photo");
           photoContainer.style.backgroundImage = menuImageUrl;
           photoContainer.style.backgroundSize = "contain";
-          photoContainer.style.backgroundPosition = "center"; // عکس رو میاره وسط
+          photoContainer.style.backgroundPosition = "center";
+          photoContainer.style.backgroundRepeat = "no-repeat";
 
+          // 🎨 استایل‌های گرافیکی برای جذاب‌تر شدن باکس عکس منو
+          photoContainer.style.backgroundColor = "rgba(11, 18, 32, 0.85)"; // پس‌زمینه تیره شیک و عمیق
+          photoContainer.style.backdropFilter = "blur(12px)"; // حالت شیشه‌ای مات (Glassmorphism)
+          photoContainer.style.border = "1px solid rgba(215, 163, 74, 0.3)"; // بوردر طلایی خیلی ظریف و لوکس
+          photoContainer.style.borderRadius = "var(--radius)"; // هماهنگ با انحنای بقیه بخش‌های سایت
+          photoContainer.style.boxShadow =
+            "inset 0 0 30px rgba(0, 0, 0, 0.7), 0 12px 32px rgba(0, 0, 0, 0.5)";
           // مخفی کردن موقت متون داخل عکس (مثل نام عمارت و آدرس) برای دیده شدن بهتر منو
           if (photoContainer.firstElementChild) {
             photoContainer.firstElementChild.style.opacity = "0";
@@ -165,7 +173,13 @@ fetch("data/halls.json")
       const photoContainer = document.querySelector(".photo");
       photoContainer.style.backgroundImage = hall.photo;
       photoContainer.style.backgroundSize = "cover";
+      photoContainer.style.backgroundPosition = "center";
 
+      // 🔄 پاک کردن استایل‌های منو و برگشت به حالت اولیه عکس عمارت
+      photoContainer.style.backgroundColor = "";
+      photoContainer.style.backdropFilter = "";
+      photoContainer.style.border = "";
+      photoContainer.style.boxShadow = "";
       // ظاهر کردن دوباره متن‌های روی عکس عمارت
       if (photoContainer.firstElementChild) {
         photoContainer.firstElementChild.style.opacity = "1";
@@ -219,36 +233,3 @@ fetch("data/halls.json")
 
     //...end
   });
-
-///////// test kar
-// const a_menu = document.querySelectorAll(".menu-subject");
-// const img_menu = document.querySelector(".img-menu");
-// const back_info_main = document.querySelector(".back-info-main");
-// const menu_info = document.querySelector(".menu-info");
-// const book = document.querySelectorAll(".book");
-// const info_main = document.querySelector(".info-main");
-// const menu_show_mobile = document.querySelector(".menu-show-mobile");
-
-// a_menu.forEach((mov) => {
-//   mov.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     if (mov.getAttribute("data-img")) {
-//       img_menu.style.backgroundImage = mov.getAttribute("data-img");
-//       img_menu.style.opacity = "1";
-//     }
-//   });
-// });
-// /////
-// back_info_main.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   menu_info.classList.toggle("hidden");
-//   info_main.classList.toggle("hidden");
-// });
-
-// book.forEach((mov) => {
-//   mov.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     info_main.classList.toggle("hidden");
-//     menu_info.classList.toggle("hidden");
-//   });
-// });
