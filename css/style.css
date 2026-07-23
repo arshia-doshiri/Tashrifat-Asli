@@ -1274,247 +1274,281 @@ ul {
    8. استایل صفحه پشتیبانی (Support Page)
    ========================================= */
 .support-page {
-  background: #f0f2f5;
-
-  height: 100vh;
-  overflow: hidden; /* fix-momo */
-
+  background: #070a0f;
+  color: #e9eef8;
+  font-family: "Vazirmatn", sans-serif;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px 10px;
+  margin: 0;
 }
 
 .support-container {
-  width: 90%;
-  max-width: 1400px;
-  height: 90vh;
-  background: white;
-  border-radius: 30px;
-  /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); */
-  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.449);
+  width: 100%;
+  max-width: 1150px;
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 400px 1fr;
+  background: rgba(15, 23, 32, 0.7);
+  border: 1px solid rgba(215, 163, 74, 0.2);
+  border-radius: 20px;
   overflow: hidden;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(215, 163, 74, 0.05);
+  backdrop-filter: blur(15px);
 }
 
-/* پنل اطلاعات (راست) */
-.social-connect {
-  position: absolute;
-  top: o;
-  inset-inline-end: 0;
-}
-.social-icons {
-  display: flex;
-  justify-content: space-around;
-}
+/* --- Panel Info (Right) --- */
 .info-panel {
-  background-color: var(--color-secondary);
-  color: white;
-  padding: 4rem;
   position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(11, 18, 32, 0.95),
+    rgba(7, 10, 15, 0.98)
+  );
+  padding: 40px 30px;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-inline-end: 10px solid rgba(0, 0, 0, 0.376);
-}
-.more-information {
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  height: max-content;
-  background-color: black;
-  bottom: 0;
-  inset-inline-start: 0;
-  z-index: 10;
-}
-.info-panel__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../image/img-3.webp") no-repeat center/cover;
-  opacity: 0.2;
-  mix-blend-mode: overlay;
-}
-.info-panel__content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  width: 100% !important;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  margin-top: -3rem;
 }
 
 .back-link {
+  color: var(--accent, #d7a34a);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 3rem;
-  font-size: 0.9rem;
+  gap: 8px;
+  transition: transform 0.3s ease;
 }
+
 .back-link:hover {
-  color: white;
+  transform: translateX(5px);
 }
 
 .info-header h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 25px 0 10px;
 }
+
 .info-header p {
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 400px;
+  color: #98a0b3;
+  font-size: 0.88rem;
+  line-height: 1.7;
 }
 
 .info-cards {
-  margin: 3rem 0;
   display: flex;
-  /* flex-direction: column; */
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 2rem;
-  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  margin: 30px 0;
 }
+
 .info-card {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  width: 12rem;
-  background-color: #ffffff09;
-  padding: 10px;
-  border-radius: 10px;
-  backdrop-filter: blur(1px);
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
 }
-.icon-box {
-  width: max-content;
-  height: max-content;
-  /* background: rgba(255, 255, 255, 0.1); */
-  border-radius: 15px;
+
+.info-card .icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(215, 163, 74, 0.15);
+  color: #d7a34a;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  backdrop-filter: blur(5px);
-}
-.text-box {
-  width: auto;
-  height: 100%;
+  font-size: 1.1rem;
 }
 
-/* پنل فرم (چپ) */
-.form-panel {
-  background: #ffffff;
-  padding: 4rem;
+.info-card .text-box h3 {
+  font-size: 0.82rem;
+  color: #98a0b3;
+  margin: 0 0 3px 0;
+}
+
+.info-card .text-box p {
+  font-size: 0.92rem;
+  color: #fff;
+  font-weight: 600;
+  margin: 0;
+}
+
+.social-connect span {
+  font-size: 0.8rem;
+  color: #98a0b3;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.social-icons {
   display: flex;
-  align-items: start;
-  justify-content: center;
-  overflow-y: auto;
-  margin-top: -2.5rem;
+  gap: 12px;
 }
 
-.glass-form {
-  width: 100%;
-  max-width: 500px;
+.social-icons a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social-icons a:hover {
+  background: #d7a34a;
+  color: #070a0f;
+  transform: translateY(-3px);
+}
+
+/* --- Form Panel (Left) --- */
+.form-panel {
+  padding: 45px 40px;
+  background: rgba(11, 18, 32, 0.5);
+}
+
+.form-title-box h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 6px 0;
+}
+
+.form-title-box p {
+  color: #98a0b3;
+  font-size: 0.88rem;
+  margin-bottom: 30px;
 }
 
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 20px;
 }
 
-#service {
-  -webkit-appearance: none;
-  appearance: none;
-}
-
+/* Floating Input Groups */
 .input-group {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 22px;
 }
+
+.input-group.full-width {
+  grid-column: 1 / -1;
+}
+
 .input-group input,
 .input-group textarea,
 .input-group select {
   width: 100%;
-  padding: 1rem 1rem 1rem 3rem;
-  background: white;
-  border: 2px solid #eee;
-  border-radius: 15px;
-  font-family: var(--font-main);
-  font-size: 1rem;
+  padding: 14px 42px 14px 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: inherit;
   outline: none;
-  transition: 0.3s;
-}
-.input-group textarea {
-  resize: vertical;
-  min-height: 120px;
+  transition: all 0.3s ease;
 }
 
-/* انیمیشن لیبل شناور */
+.input-group select {
+  cursor: pointer;
+  appearance: none;
+}
+
+.input-group select option {
+  background: #0b1220;
+  color: #fff;
+}
+
+.input-group textarea {
+  resize: vertical;
+}
+
+.input-icon {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  color: #d7a34a;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
 .input-group label {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
-  color: #999;
-  transition: 0.3s;
+  right: 42px;
+  top: 15px;
+  color: #7e889b;
+  font-size: 0.88rem;
   pointer-events: none;
-  background: rgba(255, 255, 255, 0.668);
-  backdrop-filter: blur(1px);
-  border-radius: 10px;
-  padding: 0 5px;
+  transition: all 0.3s ease;
 }
+
+/* Float Label effect */
 .input-group input:focus ~ label,
 .input-group input:not(:placeholder-shown) ~ label,
 .input-group textarea:focus ~ label,
-.input-group textarea:not(:placeholder-shown) ~ label {
+.input-group textarea:not(:placeholder-shown) ~ label,
+.input-group select:focus ~ label,
+.input-group select:valid ~ label {
   top: -10px;
-  font-size: 0.8rem;
-  color: var(--color-primary);
+  right: 15px;
+  font-size: 0.72rem;
+  color: #d7a34a;
+  background: #0b1220;
+  padding: 0 6px;
+  border-radius: 4px;
 }
 
 .input-group input:focus,
 .input-group textarea:focus,
 .input-group select:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 4px rgba(135, 140, 83, 0.1);
+  border-color: #d7a34a;
+  background: rgba(215, 163, 74, 0.03);
+  box-shadow: 0 0 15px rgba(215, 163, 74, 0.15);
 }
 
-.input-icon {
-  position: absolute;
-  left: 1rem;
-  top: 1.1rem;
-  color: #ccc;
-  transition: 0.3s;
-}
-.input-group input:focus ~ .input-icon {
-  color: var(--color-primary);
-}
-
+/* Submit Button */
 .submit-btn {
   width: 100%;
-  padding: 1rem;
-  background: var(--color-secondary);
-  color: white;
+  padding: 16px;
   border: none;
-  border-radius: 15px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d7a34a, #f0c676);
+  color: #070a0f;
+  font-weight: 800;
   font-size: 1rem;
-  font-weight: 700;
+  font-family: inherit;
   cursor: pointer;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  transition: 0.3s;
-  font-family: var(--font-main);
-}
-.submit-btn:hover {
-  background: var(--color-secondary-light);
-  box-shadow: 0 10px 20px rgba(34, 63, 69, 0.2);
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(215, 163, 74, 0.3);
+  margin-top: 10px;
 }
 
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(215, 163, 74, 0.45);
+}
 /* =========================================
    9. مدیا کوئری (ریسپانسیو)
    ========================================= */
@@ -2400,6 +2434,28 @@ p.lead {
     height: 120px;
   }
 }
+@media (max-width: 900px) {
+  .support-container {
+    grid-template-columns: 1fr;
+    max-width: 550px;
+    border-radius: 16px;
+  }
+
+  .info-panel {
+    padding: 30px 20px;
+    border-left: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .form-panel {
+    padding: 30px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
 @media (max-width: 720px) {
   .hero-hall {
     grid-template-columns: 1fr;
@@ -2637,4 +2693,34 @@ details[open] .control-icon-expand {
 }
 .address-text {
   text-align: center;
+}
+
+/* شخصی‌سازی تقویم شمسی متناسب با تم لوکس سایت */
+.pdatepicker-plot-area {
+  background-color: #0b1220 !important;
+  border: 1px solid rgba(215, 163, 74, 0.3) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+  font-family: "Vazirmatn", sans-serif !important;
+  color: #fff !important;
+}
+
+.pdatepicker-plot-area .datepicker-day-view .table-days td span {
+  color: #e9eef8 !important;
+  border-radius: 8px !important;
+}
+
+.pdatepicker-plot-area .datepicker-day-view .table-days td.selected span {
+  background-color: #d7a34a !important;
+  color: #070a0f !important;
+  font-weight: bold !important;
+}
+
+.pdatepicker-plot-area .datepicker-day-view .table-days td span:hover {
+  background-color: rgba(215, 163, 74, 0.2) !important;
+}
+
+.pdatepicker-plot-area .datepicker-header {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
 }

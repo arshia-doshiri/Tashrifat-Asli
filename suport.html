@@ -3,20 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>درخواست مشاوره و رزرو | تشریفات اصلی</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- فونت و استایل تقویم شمسی -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body class="support-page">
     <div class="support-container">
+      <!-- پنل اطلاعات تماس (سمت راست/بالا) -->
       <div class="info-panel">
-        <!-- part mobile more btn -->
-        <!-- <div class="more-information">
-          <p class="text-more-information highlight">دیدن ادامه مطالب</p>
-        </div> -->
-        <!-- part mobile more btn end -->
         <div class="info-panel__bg"></div>
         <div class="info-panel__content">
           <a href="/" class="back-link">
@@ -26,8 +29,8 @@
           <div class="info-header">
             <h1>بیایید صحبت کنیم</h1>
             <p>
-              پروژه بعدی شما، شاهکار بعدی ماست. برای مشاوره رایگان با ما در تماس
-              باشید.
+              شب رویایی شما، شاهکار اختصاصی ماست. برای دریافت مشاوره و استعلام
+              ظرفیت با ما در تماس باشید.
             </p>
           </div>
 
@@ -35,8 +38,8 @@
             <div class="info-card">
               <div class="icon-box"><i class="fas fa-phone-volume"></i></div>
               <div class="text-box">
-                <h3>تماس تلفنی</h3>
-                <p dir="ltr">021 - 1234 5678</p>
+                <h3>تماس مستقیم</h3>
+                <p dir="ltr">09122069250</p>
               </div>
             </div>
             <div class="info-card">
@@ -44,77 +47,130 @@
                 <i class="fas fa-envelope-open-text"></i>
               </div>
               <div class="text-box">
-                <h3>ایمیل</h3>
-                <p>hello@tashrifat.com</p>
+                <h3>ایمیل پشتیبانی</h3>
+                <a href="mailto:info@tashrifatasli.ir">info@tashrifatasli.ir</a>
               </div>
             </div>
             <div class="info-card">
               <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
               <div class="text-box">
-                <h3>آدرس دفتر</h3>
-                <p>تهران، زعفرانیه، مقدس اردبیلی</p>
+                <h3>دفتر مرکزی و عمارت</h3>
+                <p>
+                  اتوبان فتح ٬ بلوار باغستان ٬ بعد از پل بادامک ٬ خیابان چالوکه
+                  ٬ بالاتر از گلستان ششم
+                </p>
               </div>
             </div>
           </div>
 
-          <div class="social-connect social-connect-mobile">
-            <span class="social-mobile">شبکه‌های اجتماعی:</span>
-            <div class="social-icons social-icons-mobile">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-whatsapp"></i></a>
-              <a href="#"><i class="fab fa-telegram"></i></a>
+          <div class="social-connect">
+            <span>همراه ما باشید در:</span>
+            <div class="social-icons">
+              <a
+                href="https://www.instagram.com/tashrifat.asli?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://wa.me/09122069250" target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <!-- <a href="#"><i class="fab fa-telegram"></i></a> -->
             </div>
           </div>
         </div>
       </div>
 
+      <!-- پنل فرم مشاوره (سمت چپ/پایین) -->
       <div class="form-panel">
         <form class="glass-form" id="contactForm">
-          <h2>ارسال پیام</h2>
+          <div class="form-title-box">
+            <h2>فرم مشاوره و رزرو مراسم</h2>
+            <p>اطلاعات خود را وارد کنید، در اسرع وقت با شما تماس می‌گیریم.</p>
+          </div>
 
           <div class="form-grid">
+            <!-- نام و نام خانوادگی -->
             <div class="input-group">
-              <input type="text" id="name" required placeholder=" " />
+              <input
+                type="text"
+                id="name"
+                name="from_name"
+                required
+                placeholder=" "
+              />
               <label for="name">نام و نام خانوادگی</label>
               <i class="fas fa-user input-icon"></i>
             </div>
 
+            <!-- شماره تماس -->
             <div class="input-group">
-              <input type="tel" id="phone" required placeholder=" " />
-              <label for="phone">شماره تماس</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone_number"
+                required
+                placeholder=" "
+                dir="ltr"
+              />
+              <label for="phone">شماره تماس (همراه)</label>
               <i class="fas fa-mobile-alt input-icon"></i>
             </div>
           </div>
 
-          <div class="input-group">
-            <select id="service">
-              <option value="" disabled selected>
-                نوع خدمات را انتخاب کنید
-              </option>
-              <option value="wedding">برگزاری عروسی</option>
-              <option value="birthday">تولد و جشن‌ها</option>
-              <option value="corporate">همایش و سمینار</option>
-              <option value="other">سایر موارد</option>
-            </select>
-            <i class="fas fa-chevron-down input-icon"></i>
+          <div class="form-grid">
+            <!-- تاریخ تقریبی مراسم -->
+            <div class="input-group">
+              <input
+                type="text"
+                id="wedding_date"
+                name="wedding_date"
+                placeholder=" "
+              />
+              <label for="wedding_date"
+                >تاریخ تقریبی مراسم (مثلاً: پاییز ۱۴۰۳)</label
+              >
+              <i class="fas fa-calendar-alt input-icon"></i>
+            </div>
+
+            <!-- تعداد مهمانان -->
+            <div class="input-group">
+              <select id="guest_count" name="guest_count" class="custom-select">
+                <option value="" disabled selected hidden></option>
+                <option value="زیر 150 نفر">تا ۱۵۰ نفر</option>
+                <option value="150 تا 300 نفر">۱۵۰ تا ۳۰۰ نفر</option>
+                <option value="300 تا 500 نفر">۳۰۰ تا ۵۰۰ نفر</option>
+                <option value="بالای 500 نفر">بالای ۵۰۰ نفر</option>
+              </select>
+              <label for="guest_count" class="select-label"
+                >تعداد تقریبی مهمانان</label
+              >
+              <i class="fas fa-users input-icon"></i>
+            </div>
           </div>
 
-          <div class="input-group">
-            <textarea id="message" required placeholder=" " rows="4"></textarea>
-            <label for="message">توضیحات یا پیام شما</label>
+          <!-- توضیحات -->
+          <div class="input-group full-width">
+            <textarea
+              id="message"
+              name="message"
+              rows="3"
+              placeholder=" "
+            ></textarea>
+            <label for="message">توضیحات یا درخواست‌های ویژه شما</label>
             <i class="fas fa-pen input-icon"></i>
           </div>
 
+          <!-- دکمه ارسال -->
           <button type="submit" class="submit-btn">
-            <span>ارسال درخواست</span>
+            <span>ثبت درخواست مشاوره</span>
             <i class="fas fa-paper-plane"></i>
-            <div class="btn-loader"></div>
           </button>
         </form>
       </div>
     </div>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="https://unpkg.com/persian-date@1.1.0/dist/persian-date.min.js"></script>
+    <script src="https://unpkg.com/persian-datepicker@1.2.0/dist/js/persian-datepicker.min.js"></script>
     <script src="suport.js"></script>
   </body>
 </html>
