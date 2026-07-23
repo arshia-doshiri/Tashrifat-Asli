@@ -11,7 +11,7 @@ $(document).ready(function () {
     },
   });
 
-  // ۲. مدیریت ارسال فرم با AJAX (بدون رفرش صفحه)
+  // ۲. مدیریت ارسال فرم با SweetAlert2
   const contactForm = document.getElementById("contactForm");
 
   if (contactForm) {
@@ -36,15 +36,40 @@ $(document).ready(function () {
         .then((response) => response.json())
         .then((data) => {
           if (data.status === "success") {
-            alert("✅ " + data.message);
+            // پاپ‌آپ موفقیت با SweetAlert2
+            Swal.fire({
+              title: "ثبت موفقیت‌آمیز!",
+              text: data.message,
+              icon: "success",
+              confirmButtonText: "متوجه شدم",
+              confirmButtonColor: "#d7a34a",
+              background: "#ffffff",
+              customClass: {
+                popup: "swal-rtl",
+              },
+            });
             contactForm.reset(); // پاک کردن فرم پس از ارسال موفق
           } else {
-            alert("❌ " + data.message);
+            // پاپ‌آپ خطا با SweetAlert2
+            Swal.fire({
+              title: "خطا!",
+              text: data.message,
+              icon: "error",
+              confirmButtonText: "تلاش مجدد",
+              confirmButtonColor: "#e74c3c",
+            });
           }
         })
         .catch((error) => {
           console.error("Error:", error);
-          alert("❌ خطایی در ارتباط با سرور رخ داد. لطفا مجدداً تلاش کنید.");
+          // پاپ‌آپ خطای سرور
+          Swal.fire({
+            title: "ارتباط برقرار نشد",
+            text: "خطایی در ارتباط با سرور رخ داد. لطفاً مجدداً تلاش کنید.",
+            icon: "warning",
+            confirmButtonText: "متوجه شدم",
+            confirmButtonColor: "#e74c3c",
+          });
         })
         .finally(() => {
           // برگرداندن دکمه به حالت اولیه
