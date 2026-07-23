@@ -1,17 +1,9 @@
-$(document).ready(function () {
-  // ۱. فعال‌سازی تقویم شمسی روی فیلد تاریخ
-  $("#wedding_date").pDatepicker({
-    format: "YYYY/MM/DD",
-    autoClose: true,
-    initialValue: false,
-    calendar: {
-      persian: {
-        locale: "fa",
-      },
-    },
+document.addEventListener("DOMContentLoaded", function () {
+  jalaliDatepicker.startWatch({
+    time: false,
+    hideAfterChange: true,
   });
 
-  // ۲. مدیریت ارسال فرم با SweetAlert2
   const contactForm = document.getElementById("contactForm");
 
   if (contactForm) {
@@ -21,14 +13,11 @@ $(document).ready(function () {
       const submitBtn = contactForm.querySelector(".submit-btn");
       const originalBtnText = submitBtn.innerHTML;
 
-      // تغییر حالت دکمه به در حال ارسال
       submitBtn.disabled = true;
       submitBtn.innerHTML = `<span>در حال ارسال...</span> <i class="fas fa-spinner fa-spin"></i>`;
 
-      // جمع‌آوری اطلاعات فرم
       const formData = new FormData(contactForm);
 
-      // ارسال به فایل PHP روی سرور
       fetch("send-email.php", {
         method: "POST",
         body: formData,
@@ -36,7 +25,6 @@ $(document).ready(function () {
         .then((response) => response.json())
         .then((data) => {
           if (data.status === "success") {
-            // پاپ‌آپ موفقیت با SweetAlert2
             Swal.fire({
               title: "ثبت موفقیت‌آمیز!",
               text: data.message,
@@ -48,9 +36,8 @@ $(document).ready(function () {
                 popup: "swal-rtl",
               },
             });
-            contactForm.reset(); // پاک کردن فرم پس از ارسال موفق
+            contactForm.reset();
           } else {
-            // پاپ‌آپ خطا با SweetAlert2
             Swal.fire({
               title: "خطا!",
               text: data.message,
@@ -62,7 +49,6 @@ $(document).ready(function () {
         })
         .catch((error) => {
           console.error("Error:", error);
-          // پاپ‌آپ خطای سرور
           Swal.fire({
             title: "ارتباط برقرار نشد",
             text: "خطایی در ارتباط با سرور رخ داد. لطفاً مجدداً تلاش کنید.",
@@ -72,7 +58,6 @@ $(document).ready(function () {
           });
         })
         .finally(() => {
-          // برگرداندن دکمه به حالت اولیه
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalBtnText;
         });
